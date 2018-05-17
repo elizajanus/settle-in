@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS DB;
-CREATE database apartment_DB;
+DROP DATABASE IF EXISTS settle_in;
+CREATE database settle_in;
 
-USE apartment_DB;
+USE settle_in;
 
 CREATE TABLE sublet (
   id INT NOT NULL AUTO_INCREMENT,
