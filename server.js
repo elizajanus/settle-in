@@ -29,7 +29,8 @@ app.use(express.static("public"));
 // =============================================================
 require("./routes/html-routes.js")(app);
 require("./routes/roommate-routes.js")(app);
-require("./routes/apartment-routes.js")(app);
+//require("./routes/apartment-routes.js")(app);
+require("./routes/survey-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================

@@ -24,7 +24,7 @@ module.exports = function(sequelize, DataTypes) {
  
 
   Survey.associate = function(models) {
-      Roommate.belongsTo(models.Roommate, {
+      Survey.belongsTo(models.Roommate, {
           foreignKey: {
               allowNull: false
           }
