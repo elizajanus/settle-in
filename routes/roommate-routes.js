@@ -3,7 +3,7 @@ var db = require("../models");
 module.exports = function(app) {
   app.get("/api/roommates", function(req, res) {
 
-    db.Author.findAll({
+    db.Roommate.findAll({
       include: [db.Survey]
     }).then(function(dbRoommate) {
       res.json(dbRoommate);
@@ -12,7 +12,7 @@ module.exports = function(app) {
 
   app.get("/api/roommates/:id", function(req, res) {
    
-    db.Author.findOne({
+    db.Roommate.findOne({
       where: {
         id: req.params.id
       },
