@@ -4,8 +4,10 @@ module.exports = function(sequelize, DataTypes) {
       description: {type: DataTypes.STRING, allowNull: false},
       rent: {type: DataTypes.INT, allowNull: false},
       roommates: {type: DataTypes.INT, allowNull: false},
+      baths: {type: DataTypes.DEC, allowNULL: false},
       female: {type: DataTypes.BOOLEAN, allowNull: false},
       male: {type: DataTypes.BOOLEAN, allowNull: false},
+      pets: {type: DataTypes.BOOLEAN, allowNull: false},
       city: {type: DataTypes.BOOLEAN, allowNull: false},
       location: {type: DataTypes.STRING, allowNull: false},
       landlord: {type: DataTypes.STRING, allowNull: false},
@@ -14,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
  
 
   sublet.associate = function(models) {
-      sublet.belongsTo(models.landlord, {
+      sublet.belongsTo(models.reviews, {
           foreignKey: {
               allowNull: false
           }

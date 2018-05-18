@@ -4,9 +4,9 @@ module.exports = function(sequelize, DataTypes) {
       landlord: {type: DataTypes.STRING, allowNull: false},
       review: {type: DataTypes.STRING, allowNull: false},
       rating: {type: DataTypes.INTEGER, allowNull: false},
-      apts: {type: DataTypes.BOOLEAN, allowNull: false},
+      apartments: {type: DataTypes.BOOLEAN, allowNull: false},
       houses: {type: DataTypes.BOOLEAN, allowNull: false},
-      location: {type: DataTypes.STRING, allowNull: false},
+      managementContactInfo: {type: DataTypes.STRING, allowNull: false},
     });
  
 

@@ -18,8 +18,8 @@ module.exports = function(app) {
   });
 
 
-  app.get("/rental", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/assets/html/rental.html"));
+  app.get("/apartments", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/assets/html/apartment.html"));
   });
 
 
