@@ -14,7 +14,7 @@ module.exports = function(app) {
 
 
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/assets/hmtl/index.html"));
+    res.sendFile(path.join(__dirname, "../public/assets/index.html"));
   });
 
 
