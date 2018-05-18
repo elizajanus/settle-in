@@ -8,3 +8,9 @@ $(document).ready(function() {
 
     get
 })
+
+  $(document).ready(function () {
+      $('.carousel').carousel();
+  });
+
+  

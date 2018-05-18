@@ -1,11 +1,4 @@
-/* Custom Stylesheet */
 
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
 
 nav ul a,
 nav .brand-logo {
@@ -25,6 +18,7 @@ p {
     line-height: 0;
     height: auto;
     color: rgba(255, 255, 255, .9);
+    
 }
 
 .parallax-container .section {
@@ -62,6 +56,8 @@ footer.page-footer {
 .back {
     height: 1000px;
 }
+
+
 
 .settlein {
 
