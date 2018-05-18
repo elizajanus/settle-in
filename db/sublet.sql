@@ -1,21 +1,21 @@
-DROP DATABASE IF EXISTS settle_in;
-CREATE database settle_in;
+-- DROP DATABASE IF EXISTS settle_in;
+-- CREATE database settle_in;
 
-USE settle_in;
+-- USE settle_in;
 
-CREATE TABLE sublet (
-  id INT NOT NULL AUTO_INCREMENT,
-  title VARCHAR(100) NOT NULL
-  description VARCHAR(255) NOT NULL,
-  rent INT NOT NULL,
-  roommates INT NOT NULL,
-  female BOOLEAN NOT NULL,
-  male BOOLEAN NOT NULL,
-  city varchar (100) NOT NULL,
-  location varcahar (100) NOT NULL,
-  landlord VARCHAR (50) NOT NULL
-  PRIMARY KEY (position)
-);
+-- CREATE TABLE sublet (
+--   id INT NOT NULL AUTO_INCREMENT,
+--   title VARCHAR(100) NOT NULL
+--   description VARCHAR(255) NOT NULL,
+--   rent INT NOT NULL,
+--   roommates INT NOT NULL,
+--   female BOOLEAN NOT NULL,
+--   male BOOLEAN NOT NULL,
+--   city varchar (100) NOT NULL,
+--   location varcahar (100) NOT NULL,
+--   landlord VARCHAR (50) NOT NULL
+--   PRIMARY KEY (position)
+-- );
 
 INSERT INTO sublet (title, description, rent, roommates, female, male, city, location) values ("Fan House in Downtown", "This house located in downtown Richmond is only a 15 minute walk to VCU and centrally located to dozens of anemities and close to three parks and walking and biking trails", 385, 2, 1, 0, "Richmond", "Kemper St at Randolph", "Angela Shrute");
 INSERT INTO sublet (title, description, rent, roommates, female, male, city) values ("Landmark Lifestyle Apartments", "Vintage-styled paartments are centrally located, have classic wooden floors, and are within walking distance to everything!", 650, 1, 1, 0, "Richmond", "900 West Franklin Street", "Feinstein Inc ");
