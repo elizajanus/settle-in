@@ -8,11 +8,13 @@ module.exports = function(sequelize, DataTypes) {
       male: {type: DataTypes.BOOLEAN, allowNull: false},
       city: {type: DataTypes.BOOLEAN, allowNull: false},
       location: {type: DataTypes.STRING, allowNull: false},
+      landlord: {type: DataTypes.STRING, allowNull: false},
+      managementContactInfo: {type: DataTypes.STRING, allowNull: false}
     });
  
 
   sublet.associate = function(models) {
-      sublet.belongsTo(models.landlord, {///where does this belong?????
+      sublet.belongsTo(models.landlord, {
           foreignKey: {
               allowNull: false
           }
