@@ -11,10 +11,12 @@ module.exports = function(sequelize, DataTypes) {
  
 
   landlord.associate = function(models) {
-      landlord.hasMany(models.rental, { /////figure out how to connect to sublets too////
+      landlord.hasMany(models.rental, {
           onDelete: "cascade"
       });
-      
+      landlord.hasMany(models.sublet, { 
+        onDelete: "cascade"
+    });
   };
   return landlord;
 
