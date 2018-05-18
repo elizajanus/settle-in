@@ -6,8 +6,8 @@ module.exports = function(app) {
     // We set the value to an array of the models we want to include in a left outer join
     db.sublet.findAll({
       include: [db.landlord]
-    }).then(function(apartmentdb) {////what is the name of our database?
-      res.json(apartmentdb);////what is the the name of our database? Eliza...what did you name it?
+    }).then(function(settle_in) {////what is the name of our database?
+      res.json(settle_in);////what is the the name of our database? Eliza...what did you name it?
     });
   });
 
@@ -19,15 +19,15 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       },
-      include: [db.landlord]
-    }).then(function(apartmentdb) {
-      res.json(apartmentdb);
+      include: [db.Landlord]
+    }).then(function(settle_in) {
+      res.json(settle_in);
     });
   });
 
   app.post("/api/sublet", function(req, res) {
-    db.sublet.create(req.body).then(function(apartmentdb) {
-      res.json(apartmentdb);
+    db.sublet.create(req.body).then(function(settle_in) {
+      res.json(settle_in);
     });
   });
 
@@ -36,8 +36,8 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       }
-    }).then(function(apartmentdb) {
-      res.json(apartmentdb);
+    }).then(function(settle_in) {
+      res.json(settle_in);
     });
   });
 

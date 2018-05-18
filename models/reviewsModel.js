@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var landlord = sequelize.define("landlord", {
+    var reviews = sequelize.define("reviews", {
       title: {type: DataTypes.STRING, allowNull: false},
       landlord: {type: DataTypes.STRING, allowNull: false},
       review: {type: DataTypes.STRING, allowNull: false},
@@ -10,14 +10,14 @@ module.exports = function(sequelize, DataTypes) {
     });
  
 
-  landlord.associate = function(models) {
-      landlord.hasMany(models.rental, {
+  reviews.associate = function(models) {
+      reviews.hasMany(models.Rental, {
           onDelete: "cascade"
       });
-      landlord.hasMany(models.sublet, { 
+      reviews.hasMany(models.sublet, { 
         onDelete: "cascade"
     });
   };
-  return landlord;
+  return reviews;
 
 };

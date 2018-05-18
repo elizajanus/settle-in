@@ -1,7 +1,7 @@
 $(document).read(function () {
     var subletContainer = $(".sublet-container");
 
-    $(document).on("click", "submit-sublet", handleNewReview);
+    $(document).on("click", "submit-sublet", handleNewSublet);
     $(document).on("click", "button-edit", handlePostEdit);
     $(document).on("click", "button-delete", handlePostDelete);
 
@@ -11,9 +11,9 @@ $(document).read(function () {
     var subletId;
     if (url.indexOf("?sublet_id=") !== -1) {
         subletId = url.split("=")[1];
-        getReviews(subletId);
+        getSublet(subletId);
     } else {
-        getReviews();
+        getSublet();
     }
 
     function getSublets(sublet) {
@@ -54,52 +54,52 @@ $(document).read(function () {
     function createNewRow(sublets) {
         var formattedDate = new Date(post.createdAt);
         formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
-        var newReviewCard = $("<div>");
-        newReviewCard.addClass("card");
-        var newReviewCardHeading = $("<div>");
-        newReviewCardHeading.addClass("card-header");
+        var newSubletCard = $("<div>");
+        newSubletCard.addClass("card");
+        var newSubletCardHeading = $("<div>");
+        newSubletCardHeading.addClass("card-header");
         var deleteBtn = $("<button>");
         deleteBtn.text("x");
         deleteBtn.addClass("delete btn btn-danger");
         var editBtn = $("<button>");
         editBtn.text("EDIT");
         editBtn.addClass("edit btn btn-info");
-        var newReviewTitle = $("<h2>");
-        var newReviewDate = $("<small>");
-        var newReviewAuthor = $("<h5>");
-        newReviewAuthor.text("Written by: " + review.Author.name);
-        var newReviewCardBody = $("<div>");
-        newReviewCardBody.addClass("card-body");
-        var newReviewBody = $("<p>");
-        newReviewTitle.text(review.title + " ");
-        newReviewBody.text(review.body);
-        newReviewDate.text(formattedDate);
-        newReviewTitle.append(newReviewDate);
-        newReviewCardHeading.append(deleteBtn);
-        newReviewCardHeading.append(editBtn);
-        newReviewCardHeading.append(newReviewTitle);
-        newReviewCardHeading.append(newReviewAuthor);
-        newReviewCardBody.append(newReviewBody);
-        newReviewCard.append(newReviewCardHeading);
-        newReviewCard.append(newReviewCardBody);
-        newReviewCard.data("review", review);
-        return newReviewCard;
+        var newSubletTitle = $("<h2>");
+        var newSubletDate = $("<small>");
+        var newSubletAuthor = $("<h5>");
+        newSubletAuthor.text("Written by: " + sublet.Author.name);
+        var newSubletCardBody = $("<div>");
+        newSubletCardBody.addClass("card-body");
+        var newSubletBody = $("<p>");
+        newSubletTitle.text(sublet.title + " ");
+        newSubletBody.text(sublet.body);
+        newSubletDate.text(formattedDate);
+        newSubletTitle.append(newSubletDate);
+        newSubletCardHeading.append(deleteBtn);
+        newSubletCardHeading.append(editBtn);
+        newSubletCardHeading.append(newSubletTitle);
+        newSubletCardHeading.append(newSubletAuthor);
+        newSubletCardBody.append(newSubletBody);
+        newSubletCard.append(newSubletCardHeading);
+        newSubletCard.append(newSubletCarddBody);
+        newSubletCard.data("sublet", sublet);
+        return newSubletCard;
     }
 
     function handleSubletDelete() {
         var currentSublet = $(this)
             .parent()
             .parent()
-            .data("review");
-        deleteReview(currentReview.id);
+            .data("sublet");
+        deleteSublet(currentSublet.id);
     }
 
     function handleSubletEdit() {
-        var currentReview = $(this)
+        var currentSublet = $(this)
             .parent()
             .parent()
-            .data("review");
-        window.location.href = "/I DONT KNOW WHAT TO PUT HERE" + currentReview.id;
+            .data("sublet");
+        window.location.href = "/I DONT KNOW WHAT TO PUT HERE" + currentSublet.id;
     }
 
     function displayEmpty(id) {

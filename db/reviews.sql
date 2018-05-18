@@ -1,19 +1,19 @@
-DROP DATABASE IF EXISTS settle_in;
-CREATE database settle_in;
+-- DROP DATABASE IF EXISTS settle_in;
+-- CREATE database settle_in;
 
-USE settle_in;
+-- USE settle_in;
 
-CREATE TABLE reviews (
-  id INT NOT NULL AUTO_INCREMENT,
-  title VARCHAR(100) NOT NULL,
-  landlord VARCHAR (100) NOT NULL,
-  review VARCHAR(255) NOT NULL,
-  rating INT (1) NOT NULL,
-  apartments BOOLEAN,
-  houses BOOLEAN,
-  managementContactInfo VARCHAR (50)
-  PRIMARY KEY (position)
-);
+-- CREATE TABLE reviews (
+--   id INT NOT NULL AUTO_INCREMENT,
+--   title VARCHAR(100) NOT NULL,
+--   landlord VARCHAR (100) NOT NULL,
+--   review VARCHAR(255) NOT NULL,
+--   rating INT (1) NOT NULL,
+--   apartments BOOLEAN,
+--   houses BOOLEAN,
+--   managementContactInfo VARCHAR (50)
+--   PRIMARY KEY (position)
+-- );
 
 INSERT INTO sublet (title, landlord, review, rating, apartments, houses, location, contactInfo) values ("Rental Nightmare!", "Angela Shrute", "This landlady was absolutely crazy. She brought her cats with her at each visit, and showed up unannounced. You'll never win an argument. Don't even try.", 2, 0, 1, "Ricmond", "804-555-5000");
 INSERT INTO sublet (title, landlord, review, rating, apartments, houses, location, contactInfo) values ("Sweet Religious Lady", "Angela Shrute", "She's such a sweetheart. Her cats are darlings and comem to visit. She always insists on cleaing out the dryer lint, and she has such sage advice!"5, 0, 1, "Richmond", "804-555-5000" );

@@ -5,7 +5,7 @@ $(document).read(function () {
     $(document).on("click", "button-edit", handlePostEdit);
     $(document).on("click", "button-delete", handlePostDelete);
 
-    var reviews;
+    var reviews;////What is this, and why is this here?
 
     var url = window.location.search;
     var managementId;
