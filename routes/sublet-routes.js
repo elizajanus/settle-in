@@ -5,7 +5,7 @@ module.exports = function(app) {
     // Here we add an "include" property to our options in our findAll query
     // We set the value to an array of the models we want to include in a left outer join
     db.sublet.findAll({
-      include: [db.landlord]
+      include: [db.reviews]
     }).then(function(settle_in) {////what is the name of our database?
       res.json(settle_in);////what is the the name of our database? Eliza...what did you name it?
     });
@@ -19,7 +19,7 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       },
-      include: [db.Landlord]
+      include: [db.reviews]
     }).then(function(settle_in) {
       res.json(settle_in);
     });
