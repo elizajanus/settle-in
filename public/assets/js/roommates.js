@@ -58,14 +58,64 @@ $(document).ready(function() {
   });
 });
 
-//code for search function
-//layout: dropdown on top of page above an array of roommate profiles
+//code for getting roommate profiles -- incomplete
+/*function getRoommates() {
+  $.get("/api/roommmates", function(data) {
+    console.log("Roommates", data);
+    roommates = data;
+      initializeRows();
+  });
+}
+// incomplete
+function initializeRows() {
+  roommateContainer.empty();
+  var roommatesToAdd = [];
+  for (var i = 0; i < roommates.length; i++) {
+    roommatesToAdd.push(createNewRow(posts[i]));
+  }
+  roommateContainer.append(roommatesToAdd);
+}*/
 
-/*if ($("#searchfield").val() === "non-smoking") {
+
+
+//code for search function
+//layout: 2 dropdowns on top of page above an array of roommate profiles
+//WILL THIS WORK AT ALL IDK ??? 
+
+/*
+var smoking = $("#searchfieldsmoking").val();
+var pets = $("#searchfieldpets").val();
+
+if (smoking === "non-smoking" && pets === "has pets") {
   Roommates.findAll({
     where: {
-      smoking: 0
+      smoking: 0,
+      pets: 1
     }
   });
-}*/
+} else if (smoking === "non-smoking" && pets === "no pets") {
+  Roommates.findAll({
+    where: {
+      smoking: 0,
+      pets: 0
+    }
+  });
+} else if (smoking === "smoking" && pets === "has pets") {
+  Roommates.findAll({
+    where: {
+      smoking: 1,
+      pets: 1
+    }
+  });
+} else if (smoking === "smoking" && pets === "no pets") {
+  Roommates.findAll({
+    where: {
+      smoking: 1,
+      pets: 0
+    }
+  });
+};
+
+*/
+
 
