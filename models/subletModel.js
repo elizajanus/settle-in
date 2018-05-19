@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
       description: {type: DataTypes.STRING, allowNull: false},
       rent: {type: DataTypes.INTEGER, allowNull: false},
       roommates: {type: DataTypes.INTEGER, allowNull: false},
-      baths: {type: DataTypes.DEC, allowNULL: false},
+      baths: {type: DataTypes.INTEGER, allowNULL: false},
       female: {type: DataTypes.BOOLEAN, allowNull: false},
       male: {type: DataTypes.BOOLEAN, allowNull: false},
       pets: {type: DataTypes.BOOLEAN, allowNull: false},
