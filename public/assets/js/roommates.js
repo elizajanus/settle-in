@@ -1,3 +1,5 @@
+//code to post a new profile to Roommates table
+
 $(document).ready(function () {
   var surveyJSON = {
     pages: [{
@@ -55,4 +57,11 @@ $(document).ready(function () {
     onComplete: sendDataToServer
   });
 });
+
+//code for search function
+//layout: dropdown on top of page above an array of roommate profiles
+
+if ($("#searchfield").val() === "non-smoking") {
+  
+}
 

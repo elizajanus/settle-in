@@ -35,7 +35,7 @@ module.exports = function(app) {
   });
 
   app.get("/roommates", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/asets/hmtl/roommate.html"));
+    res.sendFile(path.join(__dirname, "../public/assets/hmtl/roommate.html"));
   });
 
   app.get("/survey", function(req, res) {
