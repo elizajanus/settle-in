@@ -1,4 +1,4 @@
-// *********************************************************************************
+
 // html-routes.js - this file offers a set of routes for sending users to the various html pages
 // *********************************************************************************
 
@@ -22,9 +22,20 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/assets/html/apartment.html"));
   });
 
+  app.get("/rentals", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/assets/html/rentals.html"));
+  });
+
+  app.get("/sublets", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/assets/html/sublets.html"));
+  });
+
+  app.get("/reviews", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/assets/html/reviews.html"));
+  });
 
   app.get("/roommates", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/asets/hmtl/roommate.html"));
+    res.sendFile(path.join(__dirname, "../public/assets/html/roommate.html"));
   });
 
   app.get("/survey", function(req, res) {
