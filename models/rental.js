@@ -49,6 +49,10 @@ module.exports = function (sequelize, DataTypes) {
         allowNull: false
       }
     });
+
+    Rental.hasMany(models.Image, {
+      onDelete: "cascade"
+    });
   };
   return Rental;
 };
