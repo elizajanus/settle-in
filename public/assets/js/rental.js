@@ -9,8 +9,7 @@ $(document).ready(function() {
     get
 })
 
-  $(document).ready(function () {
-      $('.carousel').carousel();
-  });
-
+$(document).ready(function () {
+    $('.slider').slider();
+});
   
