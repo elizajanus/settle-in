@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
     var postTitle = $("");
     var landlordName = $("");
@@ -12,4 +13,3 @@ $(document).ready(function() {
 $(document).ready(function () {
     $('.slider').slider();
 });
-  
