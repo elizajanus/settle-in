@@ -23,6 +23,7 @@ module.exports = function(app) {
   });
 
   app.post("/api/roommates", function(req, res) {
+    console.log(req.body);
     db.Roommate.create(req.body).then(function(dbRoommate) {
       res.json(dbRoommate);
     });
