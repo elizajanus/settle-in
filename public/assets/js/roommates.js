@@ -1,6 +1,6 @@
 //code to post a new profile to Roommates table
 
-$(document).ready(function () {
+$(document).ready(function() {
   var surveyJSON = {
     pages: [{
       name: "roommate creator",
@@ -61,7 +61,11 @@ $(document).ready(function () {
 //code for search function
 //layout: dropdown on top of page above an array of roommate profiles
 
-if ($("#searchfield").val() === "non-smoking") {
-  
-}
+/*if ($("#searchfield").val() === "non-smoking") {
+  Roommates.findAll({
+    where: {
+      smoking: 0
+    }
+  });
+}*/
 
