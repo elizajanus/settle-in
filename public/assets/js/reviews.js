@@ -111,5 +111,52 @@ $(document).read(function () {
         var messageH2 = $("<h2>");
         messageH2.html("No reviews yet" + partial + ", navigate <WHAT IS THE LINK THAT I NEED TO PUT HERE?>");
         reviewContainer.append(messageH2);
-    }
+    };
+
+    // when user clicks add-btn
+$("#add-btn").on("click", function(event) {
+    event.preventDefault();
+  
+    // make a sublet obj
+    var newReview = {
+      // title of post from input
+      title: $(".title").val().trim(),
+      // description of apartment/sublet from input
+      landlord: $(".landlord").val().trim(),
+      // rent/cost from rent input
+      review: $("#review").val().trim(),
+      // number of roommates from roommates input
+      rating: $("#rating").val().trim(),
+        // apartments from apartments input
+      apartments: $("#apartments").val().trim(),
+        // apartments from apartments input
+      houses: $("#houses").val().trim(),
+       // managmentContactInfo from managementContactInfo inpu
+      managementContactInfo: $(".managementContactInfo").val().trim(),
+     
+    };
+  
+    // send an AJAX POST-request with jQuery
+    $.post("/api/reviews", newReview)
+      // on success, run this callback
+      .then(function(data) {
+        // log the data we found
+        console.log(data);
+      });
+  
+    // empty each input box by replacing the value with an empty string
+    $(".title").val("");
+    $(".description").val("");
+    $("#rent").val("");
+    $("#roommates").val("");
+    $(".baths").val("");
+    $("#female").val("");
+    $("#male").val("");
+    $(".pets").val("");
+    $("#location").val("");
+    $(".landlord").val("");
+    $(".managementContactInfo").val("");
+  
+  });
+
 });
