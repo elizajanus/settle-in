@@ -2,8 +2,8 @@ module.exports = function(sequelize, DataTypes) {
     var sublet = sequelize.define("sublet", {
       title: {type: DataTypes.STRING, allowNull: false},
       description: {type: DataTypes.STRING, allowNull: false},
-      rent: {type: DataTypes.INT, allowNull: false},
-      roommates: {type: DataTypes.INT, allowNull: false},
+      rent: {type: DataTypes.INTEGER, allowNull: false},
+      roommates: {type: DataTypes.INTEGER, allowNull: false},
       baths: {type: DataTypes.DEC, allowNULL: false},
       female: {type: DataTypes.BOOLEAN, allowNull: false},
       male: {type: DataTypes.BOOLEAN, allowNull: false},
