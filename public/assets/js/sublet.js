@@ -1,6 +1,10 @@
 $(document).read(function () {
     var subletContainer = $(".sublet-container");
 
+    
+
+
+    $('.dropdown-trigger').dropdown();
     $(document).on("click", "submit-sublet", handleNewSublet);
     $(document).on("click", "button-edit", handlePostEdit);
     $(document).on("click", "button-delete", handlePostDelete);
@@ -31,6 +35,8 @@ $(document).read(function () {
             }
         });
     }
+
+    
 
     function deleteSublet(id) {
         $.ajax({
