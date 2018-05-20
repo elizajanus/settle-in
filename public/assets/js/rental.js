@@ -1,8 +1,8 @@
-$(document).ready(function() {
+$(document).ready(function () {
   $(".slider").slider();
 });
 
-$("#add-btn").on("click", function(event) {
+$("#add-btn").on("click", function (event) {
   event.preventDefault();
 
   // make a sublet obj
@@ -56,7 +56,7 @@ $("#add-btn").on("click", function(event) {
   // send an AJAX POST-request with jQuery
   $.post("/api/rentals", newRental)
     // on success, run this callback
-    .then(function(data) {
+    .then(function (data) {
       // log the data we found
       console.log(data);
     });
