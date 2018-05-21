@@ -34,7 +34,7 @@ require("./routes/rental-api-routes.js")(app);
 require("./routes/reviews-routes.js")(app);
 require("./routes/roommate-routes.js")(app);
 require("./routes/sublet-routes.js")(app);
-require("./routes/survey-routes.js")(app);
+require("./routes/roommate-survey-routes.js")(app);
 require("./routes/landlord-api-routes.js")(app);
 require("./routes/review-api-routes.js")(app);
 
