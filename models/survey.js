@@ -23,13 +23,13 @@ module.exports = function(sequelize, DataTypes) {
     });
  
 
-  Survey.associate = function(models) {
-      Survey.belongsTo(models.Roommate, {
-          foreignKey: {
-              allowNull: false
-          }
-      }); 
-  };
+    Survey.associate = function(models) {
+        Survey.belongsTo(models.Roommate, {
+            foreignKey: {
+                allowNull: false
+            }
+        }); 
+    };
   return Survey;
 
 };
