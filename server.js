@@ -34,12 +34,15 @@ require("./routes/rental-api-routes.js")(app);
 require("./routes/reviews-routes.js")(app);
 require("./routes/roommate-routes.js")(app);
 require("./routes/sublet-routes.js")(app);
-require("./routes/survey-routes.js")(app);
+//require("./routes/roommate-survey-routes.js")(app);
 require("./routes/landlord-api-routes.js")(app);
 require("./routes/review-api-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
+//db.sequelize
+//.query('SET FOREIGN_KEY_CHECKS = 0', {raw: true})
+//.then(function(results) {
 db.sequelize.sync({
   force: true
 }).then(function () {

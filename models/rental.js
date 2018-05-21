@@ -43,16 +43,5 @@ module.exports = function (sequelize, DataTypes) {
     managementContactInfo: DataTypes.STRING,
   });
 
-  Rental.associate = function (models) {
-    Rental.belongsTo(models.reviews, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-
-    Rental.hasMany(models.Image, {
-      onDelete: "cascade"
-    });
-  };
   return Rental;
 };

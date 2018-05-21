@@ -1,142 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Your platform (jquery) scripts. -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+  crossorigin="anonymous">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <link href="https://surveyjs.azureedge.net/1.0.22/survey.css" type="text/css" rel="stylesheet" />
-  <script src="https://surveyjs.azureedge.net/1.0.22/survey.jquery.min.js"></script>
-  <title>Roommate Info</title>
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://surveyjs.azureedge.net/1.0.22/survey.css" type="text/css" rel="stylesheet" />
+<script src="https://surveyjs.azureedge.net/1.0.22/survey.jquery.min.js"></script>
 
 <body>
-  <!-- Your platform (jquery) scripts. -->
+
   <div id="surveyContainer"></div>
 
-  <script>
-    //code to post a new profile to Roommates table
 
-    $(document).ready(function () {
-      var surveyJSON = {
-        pages: [{
-          name: "roommate creator",
-          elements: [{
-            type: "text",
-            name: "name",
-            title: "Please enter your name:",
-            isRequired: true,
-            placeHolder: "Jon Snow"
+</body>
+
+<script>
+  $(document).ready(function () {
+    var surveyJSON = {
+      pages: [{
+        name: "roommate creator",
+        elements: [{
+          type: "text",
+          name: "name",
+          title: "Please enter your name:",
+          isRequired: true,
+          placeHolder: "Jon Snow"
+        }, {
+          type: "text",
+          name: "email",
+          title: "Your e-mail:",
+          isRequired: true,
+          validators: [{
+            type: "email"
+          }],
+          inputType: "email",
+          placeHolder: "jon.snow@nightwatch.org"
+        }, {
+          type: "text",
+          name: "age",
+          title: "Your age:",
+          isRequired: true,
+          inputType: "number"
+        }, {
+          type: "text",
+          name: "phone",
+          title: "Your phone number:",
+          inputType: "tel",
+          placeHolder: "xxx-xxx-xxxx"
+        }, {
+          type: "text",
+          name: "gender",
+          title: "Your gender (male/female/other):",
+          isRequired: true,
+          placeHolder: "female"
+        }, {
+          type: "boolean",
+          name: "smoker",
+          label: "Are you a smoker?"
+        }, {
+          type: "boolean",
+          name: "pets",
+          label: "Do you have pets?"
+        }, {
+          type: "boolean",
+          name: "groundfloor",
+          label: "Are you ok with a ground floor apartment?"
+        }, {
+          type: "boolean",
+          name: "nightowl",
+          label: "Are you a night owl (do you enjoy staying up late at night)?"
+        }, {
+          type: "boolean",
+          name: "clean",
+          label: "Do you like a clean apartment?"
+        }, {
+          type: "boolean",
+          name: "entertainer",
+          label: "Do you like to entertain your friends at your apartment often?"
+        }, {
+          type: "boolean",
+          name: "religious",
+          label: "Are you religious?"
+        }, {
+          type: "boolean",
+          name: "samegender",
+          label: "Do you prefer a same gender roommate?"
+        }, {
+          type: "radiogroup",
+          name: "allergies",
+          title: "Do you have any of the following allergies?",
+          choices: [{
+            value: 1,
+            text: "Peanuts"
           }, {
-            type: "text",
-            name: "email",
-            title: "Your e-mail:",
-            isRequired: true,
-            validators: [{
-              type: "email"
-            }],
-            inputType: "email",
-            placeHolder: "jon.snow@nightwatch.org"
+            value: 2,
+            text: "Cat"
           }, {
-            type: "text",
-            name: "age",
-            title: "Your age:",
-            isRequired: true,
-            inputType: "number"
+            value: 3,
+            text: "Dog"
           }, {
-            type: "text",
-            name: "phone",
-            title: "Your phone number:",
-            inputType: "tel",
-            placeHolder: "xxx-xxx-xxxx"
+            value: 4,
+            text: "Indoor plants"
           }, {
-            type: "text",
-            name: "gender",
-            title: "Your gender (male/female/other):",
-            isRequired: true,
-            placeHolder: "female"
+            value: 5,
+            text: "None"
           }]
+        }, {
+          type: "boolean",
+          name: "relationship",
+          label: "Are you in a serious relationship?"
+        }, {
+          type: "boolean",
+          name: "roommaterelationship",
+          label: "Are you ok if your roommate is in a serious relationship?"
+        }, {
+          type: "boolean",
+          name: "grocery",
+          label: "Do you like to split grocery bills?"
+        }, {
+          type: "boolean",
+          name: "bathroom",
+          label: "Are you ok with sharing a bathroom?"
+        }, {
+          type: "boolean",
+          name: "cooking",
+          label: "Do you like to cook?"
+        }, {
+          type: "radiogroup",
+          name: "pricerange",
+          title: "Price range for your share of the rent:",
+          choices: [{
+            value: 1,
+            text: "0 - $300"
+          }, {
+            value: 2,
+            text: "$301 - $600"
+          }, {
+            value: 3,
+            text: "$601 - $900"
+          }, {
+            value: 4,
+            text: "$901 +"
+          }]
+        }, {
+          type: "boolean",
+          name: "veg",
+          label: "Are you a vegetarian or vegan?"
+        }, {
+          type: "radiogroup",
+          name: "personality",
+          title: "Personality:",
+          choices: [{
+            value: 1,
+            text: "Type A - in charge"
+          }, {
+            value: 2,
+            text: "Slightly more relaxed"
+          }, {
+            value: 3,
+            text: "Fairly relaxed"
+          }, {
+            value: 4,
+            text: "Totally laid back"
+          }]
+        }, {
+          type: "boolean",
+          name: "children",
+          label: "Do you have any children?"
+        }, {
+          type: "radiogroup",
+          name: "freetime",
+          title: "How much free time do you spend at home?",
+          choices: [{
+            value: 1,
+            text: "I spend almost all of my time at home"
+          }, {
+            value: 2,
+            text: "I spend 50 - 75% of my free time at home."
+          }, {
+            value: 3,
+            text: "I spend 20 - 50% of my free time at home."
+          }, {
+            value: 4,
+            text: "I am always out doing something in my free time."
+          }]
+        }, {
+          type: "boolean",
+          name: "wfh",
+          label: "Do you work from home?"
         }]
-      }
-
-      function sendDataToServer(results) {
-        $.post("/api/roommates", results.data)
-          .then(function (data) {
-            alert("The results are:" + JSON.stringify(survey.data));
-          }).catch(function (error) {
-            alert(error);
-          })
-      };
-
-      var survey = new Survey.Model(surveyJSON);
-      $("#surveyContainer").Survey({
-        model: survey,
-        onComplete: sendDataToServer
-      });
-    });
-
-    //code for getting roommate profiles -- incomplete
-    /*function getRoommates() {
-      $.get("/api/roommmates", function(data) {
-        console.log("Roommates", data);
-        roommates = data;
-          initializeRows();
-      });
-    }
-    // incomplete
-    function initializeRows() {
-      roommateContainer.empty();
-      var roommatesToAdd = [];
-      for (var i = 0; i < roommates.length; i++) {
-        roommatesToAdd.push(createNewRow(posts[i]));
-      }
-      roommateContainer.append(roommatesToAdd);
-    }*/
-    </script>
-    </body> 
-    </html>
-
-
-
-
-    <!-- //code for search function
-    //layout: 2 dropdowns on top of page above an array of roommate profiles
-    //WILL THIS WORK AT ALL IDK ??? 
-
-    /*
-    var smoking = $("#searchfieldsmoking").val();
-    var pets = $("#searchfieldpets").val();
-
-    if (smoking === "non-smoking" && pets === "has pets") {
-      Roommates.findAll({
-        where: {
-          smoking: 0,
-          pets: 1
-        }
-      });
-    } else if (smoking === "non-smoking" && pets === "no pets") {
-      Roommates.findAll({
-        where: {
-          smoking: 0,
-          pets: 0
-        }
-      });
-    } else if (smoking === "smoking" && pets === "has pets") {
-      Roommates.findAll({
-        where: {
-          smoking: 1,
-          pets: 1
-        }
-      });
-    } else if (smoking === "smoking" && pets === "no pets") {
-      Roommates.findAll({
-        where: {
-          smoking: 1,
-          pets: 0
-        }
-      });
+      }],
+      cookieName: "Roommate",
+      sendResultOnPageNext: true,
+      showQuestionNumbers: "off"
     };
 
-    */ -->
+
+    //this works
+    function sendDataToServer(results) {
+      $.post("/api/roommates", results.data)
+        .then(function (data) {
+          alert("The results are:" + JSON.stringify(survey.data));
+          survey.clear();
+          survey.render();
+        }).catch(function (error) {
+          alert(error);
+        }).then(getRoommates);
+    }
+
+    var survey = new Survey.Model(surveyJSON);
+    $("#surveyContainer").Survey({
+      model: survey,
+      onComplete: sendDataToServer
+    });
+
+  });
+</script>
+
+</html>

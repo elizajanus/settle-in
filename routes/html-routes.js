@@ -43,12 +43,16 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/assets/html/landlord-manager.html"));
   });
 
-  app.get("/roommates", function (req, res) {
+  app.get("/roommatessurvey", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/assets/html/roommate.html"));
   });
 
-  app.get("/survey", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/assets/html/survey.html"));
+  app.get("/roommateslisting", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/assets/html/roommate-listing.html"));
+  });
+
+  app.get("/roommates", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/assets/html/roommate-home.html"));
   });
 
 };

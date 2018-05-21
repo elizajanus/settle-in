@@ -4,7 +4,6 @@ module.exports = function(app) {
   app.get("/api/roommates", function(req, res) {
 
     db.Roommate.findAll({
-      include: [db.Survey]
     }).then(function(dbRoommate) {
       res.json(dbRoommate);
     });
@@ -15,8 +14,7 @@ module.exports = function(app) {
     db.Roommate.findOne({
       where: {
         id: req.params.id
-      },
-      include: [db.Survey]
+      }
     }).then(function(dbRoommate) {
       res.json(dbRoommate);
     });

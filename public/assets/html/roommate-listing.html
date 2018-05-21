@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Your platform (jquery) scripts. -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+  crossorigin="anonymous">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://surveyjs.azureedge.net/1.0.22/survey.css" type="text/css" rel="stylesheet" />
+<script src="https://surveyjs.azureedge.net/1.0.22/survey.jquery.min.js"></script>
+
+<body>
+    <div class="jumbotron">
+        <h1 style="text-align:center">Meet Your New Roommate Today!</h1>
+      </div>
+  
+  <div class="container">
+    <div class="row">
+      <div id="roommateContainer" class="col-md-4">
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  $(document).ready(function () {
+
+    function getRoommates() {
+      $.get("/api/roommates", function (data) {
+        console.log("Roommates", data);
+        for (var i = 0; i < data.length; i++) {
+          $("#roommateContainer").append(
+            `<div class="panel panel-default" width="500" height="500">
+      <div class="panel-heading">
+        <h3 class="panel-title"> ${data[0].name} </h3>
+      </div>
+      <div class="panel-body">
+        <p>Email: <a href="mailto:${data[0].email}">${data[0].email}</a><br>
+           Age: ${data[0].age}<br>
+           Phone: ${data[0].phone}<br>
+           Gender: ${data[0].gender}<br>
+           Are you a smoker?: ${data[0].smoking}<br>
+           Do you have pets?: ${data[0].pets}<br>
+           Would you live on the ground floor? ${data[0].ground}<br>
+           Are you a night owl? ${data[0].nightowl}<br>
+           Are you a clean person? ${data[0].clean}<br>
+           Do you entertain guests? ${data[0].entertainer}<br>
+           Are you religious? ${data[0].religious}<br>
+           Would you prefer a roommate with the same gender as yours? ${data[0].samegender}<br>
+           What allergies do you have? ${data[0].allergies}<br>
+           Are you in a serious relationship? ${data[0].relationship}<br>
+           Do you mind if your roommate is in a serious relationship? ${data[0].relationship}<br>
+           Do you mind splitting groceries with your roommate? ${data[0].groceries}<br>
+           Do you mind sharing a bathroom? ${data[0].bathroom}<br>
+           Do you like to cook? ${data[0].cooking}<br>
+           What is your price range? ${data[0].pricerange}<br>
+           Are you vegetarian or vegan? ${data[0].veg}<br>
+           What is your personality type? ${data[0].personality}<br>
+           Do you have kids? ${data[0].kids}<br>
+           How much free time do you have? ${data[0].freetime}<br>
+           Do you work from home? ${data[0].wfh}</p>
+      </div>
+      <div>
+    </div>
+      </div>`
+          );
+        }
+
+      });
+    };
+    getRoommates();
+
+  });
+</script>
+</html>
