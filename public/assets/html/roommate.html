@@ -20,6 +20,7 @@
 
 <script>
   $(document).ready(function () {
+
     var surveyJSON = {
       pages: [{
         name: "roommate creator",
@@ -57,6 +58,10 @@
           title: "Your gender (male/female/other):",
           isRequired: true,
           placeHolder: "female"
+        }, {
+          type: "text",
+          name: "image",
+          title: "Link to an image of yourself"
         }, {
           type: "boolean",
           name: "smoker",
