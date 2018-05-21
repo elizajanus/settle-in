@@ -1,6 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
     var Roommate = sequelize.define("Roommate", {
       name: {type: DataTypes.STRING, allowNull: false},
+      image: {type: DataTypes.STRING, allowNull: false},
       email: {type: DataTypes.STRING, allowNull: false},
       age: {type: DataTypes.INTEGER, allowNull: false},
       phone: {type: DataTypes.STRING, allowNull: false},
@@ -26,6 +27,6 @@ module.exports = function(sequelize, DataTypes) {
       freetime: {type: DataTypes.STRING, defaultValue: "None"},
       wfh: {type: DataTypes.BOOLEAN, defaultValue: false}
     });
-    return Roommate;  
+      return Roommate;  
   };
 
