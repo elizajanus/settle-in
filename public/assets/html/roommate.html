@@ -14,14 +14,7 @@
 <body>
 
   <div id="surveyContainer"></div>
-  <hr>
-  <div class="container">
-    <div class="row">
-      <div id="roommateContainer" class="col-md-4">
 
-      </div>
-    </div>
-  </div>
 
 </body>
 
@@ -225,59 +218,6 @@
       onComplete: sendDataToServer
     });
 
-    //this doesn't work
-    function getRoommates() {
-      $.get("/api/roommates", function (data) {
-        console.log("Roommates", data);
-        for (var i = 0; i < data.length; i++) {
-          $("#roommateContainer").append(
-            `<div class="panel panel-default" width="500" height="500">
-      <div class="panel-heading">
-        <h3 class="panel-title"> ${data[0].name} </h3>
-      </div>
-      <div class="panel-body">
-        <p>Email: ${data[0].email}<br>
-           Age: ${data[0].age}<br>
-           Phone: ${data[0].phone}<br>
-           Gender: ${data[0].gender}<br>
-           Are you a smoker?: ${data[0].smoking}<br>
-           Do you have pets?: ${data[0].pets}<br>
-           Would you live on the ground floor? ${data[0].ground}<br>
-           Are you a night owl? ${data[0].nightowl}<br>
-           Are you a clean person? ${data[0].clean}<br>
-           Do you entertain guests? ${data[0].entertainer}<br>
-           Are you religious? ${data[0].religious}<br>
-           Would you prefer a roommate with the same gender as yours? ${data[0].samegender}<br>
-           What allergies do you have? ${data[0].allergies}<br>
-           Are you in a serious relationship? ${data[0].relationship}<br>
-           Do you mind if your roommate is in a serious relationship? ${data[0].relationship}<br>
-           Do you mind splitting groceries with your roommate? ${data[0].groceries}<br>
-           Do you mind sharing a bathroom? ${data[0].bathroom}<br>
-           Do you like to cook? ${data[0].cooking}<br>
-           What is your price range? ${data[0].pricerange}<br>
-           Are you vegetarian or vegan? ${data[0].veg}<br>
-           What is your personality type? ${data[0].personality}<br>
-           Do you have kids? ${data[0].kids}<br>
-           How much free time do you have? ${data[0].freetime}<br>
-           Do you work from home? ${data[0].wfh}</p>
-      </div>
-    </div>`
-          );
-        }
-
-      });
-    };
-    getRoommates();
-    // incomplete
-    /*var roommateContainer = $("#roommateContainer");
-    function initializeRows() {
-      roommateContainer.empty();
-      var roommatesToAdd = [];
-      for (var i = 0; i < data.length; i++) {
-        roommatesToAdd.push(createNewRow(data[i]));
-      }
-      roommateContainer.append(roommatesToAdd);
-    }*/
   });
 </script>
 
