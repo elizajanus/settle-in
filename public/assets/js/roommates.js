@@ -59,7 +59,7 @@ $(document).ready(function() {
 });
 
 //code for getting roommate profiles -- incomplete
-/*function getRoommates() {
+function getRoommates() {
   $.get("/api/roommmates", function(data) {
     console.log("Roommates", data);
     roommates = data;
@@ -74,16 +74,16 @@ function initializeRows() {
     roommatesToAdd.push(createNewRow(posts[i]));
   }
   roommateContainer.append(roommatesToAdd);
-}*/
+}
 
 
 
 //code for search function
 //layout: 2 dropdowns on top of page above an array of roommate profiles
 //WILL THIS WORK AT ALL IDK ??? 
+//re-do this as a query string to our api, can't have any sequelize on client side
 
-/*
-var smoking = $("#searchfieldsmoking").val();
+/*var smoking = $("#searchfieldsmoking").val();
 var pets = $("#searchfieldpets").val();
 
 if (smoking === "non-smoking" && pets === "has pets") {
@@ -115,7 +115,7 @@ if (smoking === "non-smoking" && pets === "has pets") {
     }
   });
 };
-
 */
+
 
 

@@ -1,29 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+$(document).ready(function () {
+  // survey.clear();
+  // survey.render();
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <link href="https://surveyjs.azureedge.net/1.0.22/survey.css" type="text/css" rel="stylesheet" />
-    <script src="https://surveyjs.azureedge.net/1.0.22/survey.jquery.min.js"></script>
-    <!--<script src="../assets/js/roommate-survey.js"></script>-->
-  
-</head>
-
-<body>
-        <div id="surveyContainer"></div>
-    
-    
-</body>
-
-
-<script>
-$(document).ready(function() {
-    var surveyJSON = {
+  var surveyJSON = {
     locale: "en",
     title: "Roommate Survey",
     pages: [{
@@ -171,8 +150,8 @@ $(document).ready(function() {
   }
   // var roommateScores = [];
 
-  function sendDataToServer(results) {
-    console.log(results.data);
+  function sendDataToServer(survey) {
+    console.log(survey.data);
 
     //send Ajax request to your web server.
     $.post("/api/survey", survey.data)
@@ -211,6 +190,3 @@ $(document).ready(function() {
     onComplete: sendDataToServer
   });
 });
-
-</script>
-</html>
