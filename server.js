@@ -40,11 +40,12 @@ require("./routes/review-api-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize
-    .query('SET FOREIGN_KEY_CHECKS = 0', {raw: true})
-    .then(function(results) {
-        db.sequelize.sync({force: true});
-    }).then(function () {
+//db.sequelize
+//.query('SET FOREIGN_KEY_CHECKS = 0', {raw: true})
+//.then(function(results) {
+db.sequelize.sync({
+  force: true
+}).then(function () {
   app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
   });
