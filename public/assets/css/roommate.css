@@ -1,0 +1,24 @@
+.img-wrapper {
+    height: 850px;
+    background-size: cover;
+    background-position: center center;
+    /* display: inline-block;
+    overflow: hidden;
+    transition: all .2s ease;
+    vertical-align: middle; */
+}
+
+#download-button {
+    position: absolute;
+    top: 180px;
+    left: 30px;
+}
+
+#roommate-title {
+    font-size: 44px;
+    font-weight: bold;
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    color: white;
+}
