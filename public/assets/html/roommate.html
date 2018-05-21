@@ -1,3 +1,6 @@
+
+<!DOCTYPE html>
+<html lang="en">
 <!-- Your platform (jquery) scripts. -->
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -5,132 +8,146 @@
   crossorigin="anonymous"></script>
 <link href="https://surveyjs.azureedge.net/1.0.22/survey.css" type="text/css" rel="stylesheet"/>
 <script src="https://surveyjs.azureedge.net/1.0.22/survey.jquery.min.js"></script>
-<!--<script src="../assets/js/roommates.js"></script>-->
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <link href="https://surveyjs.azureedge.net/1.0.22/survey.css" type="text/css" rel="stylesheet" />
+  <script src="https://surveyjs.azureedge.net/1.0.22/survey.jquery.min.js"></script>
+  <title>Roommate Info</title>
+</head>
 
+<body>
+  <!-- Your platform (jquery) scripts. -->
+  <div id="surveyContainer"></div>
 
-<div id="surveyContainer"></div>
+  <script>
+    //code to post a new profile to Roommates table
 
-<script>
-$(document).ready(function() {
-    var surveyJSON = {
-      pages: [{
-        name: "roommate creator",
-        elements: [{
-          type: "text",
-          name: "name",
-          title: "Please enter your name:",
-          isRequired: true,
-          placeHolder: "Jon Snow"
-        }, {
-          type: "text",
-          name: "email",
-          title: "Your e-mail:",
-          isRequired: true,
-          validators: [{
-            type: "email"
-          }],
-          inputType: "email",
-          placeHolder: "jon.snow@nightwatch.org"
-        }, {
-          type: "text",
-          name: "age",
-          title: "Your age:",
-          isRequired: true,
-          inputType: "number"
-        }, {
-          type: "text",
-          name: "phone",
-          title: "Your phone number:",
-          inputType: "tel",
-          placeHolder: "xxx-xxx-xxxx"
-        }, {
-          type: "text",
-          name: "gender",
-          title: "Your gender (male/female/other):",
-          isRequired: true,
-          placeHolder: "female"
+    $(document).ready(function () {
+      var surveyJSON = {
+        pages: [{
+          name: "roommate creator",
+          elements: [{
+            type: "text",
+            name: "name",
+            title: "Please enter your name:",
+            isRequired: true,
+            placeHolder: "Jon Snow"
+          }, {
+            type: "text",
+            name: "email",
+            title: "Your e-mail:",
+            isRequired: true,
+            validators: [{
+              type: "email"
+            }],
+            inputType: "email",
+            placeHolder: "jon.snow@nightwatch.org"
+          }, {
+            type: "text",
+            name: "age",
+            title: "Your age:",
+            isRequired: true,
+            inputType: "number"
+          }, {
+            type: "text",
+            name: "phone",
+            title: "Your phone number:",
+            inputType: "tel",
+            placeHolder: "xxx-xxx-xxxx"
+          }, {
+            type: "text",
+            name: "gender",
+            title: "Your gender (male/female/other):",
+            isRequired: true,
+            placeHolder: "female"
+          }]
         }]
-      }]
+      }
+
+      function sendDataToServer(results) {
+        $.post("/api/roommates", results.data)
+          .then(function (data) {
+            alert("The results are:" + JSON.stringify(survey.data));
+          }).catch(function (error) {
+            alert(error);
+          })
+      };
+
+      var survey = new Survey.Model(surveyJSON);
+      $("#surveyContainer").Survey({
+        model: survey,
+        onComplete: sendDataToServer
+      });
+    });
+
+    //code for getting roommate profiles -- incomplete
+    /*function getRoommates() {
+      $.get("/api/roommmates", function(data) {
+        console.log("Roommates", data);
+        roommates = data;
+          initializeRows();
+      });
     }
-  
-    function sendDataToServer(results) {
-      $.post("/api/roommates", results.data)
-        .then(function (data) {
-          alert("The results are:" + JSON.stringify(survey.data));
-        }).catch(function (error) {
-          alert(error);
-        })
+    // incomplete
+    function initializeRows() {
+      roommateContainer.empty();
+      var roommatesToAdd = [];
+      for (var i = 0; i < roommates.length; i++) {
+        roommatesToAdd.push(createNewRow(posts[i]));
+      }
+      roommateContainer.append(roommatesToAdd);
+    }*/
+    </script>
+    </body> 
+    </html>
+
+
+
+
+    <!-- //code for search function
+    //layout: 2 dropdowns on top of page above an array of roommate profiles
+    //WILL THIS WORK AT ALL IDK ??? 
+
+    /*
+    var smoking = $("#searchfieldsmoking").val();
+    var pets = $("#searchfieldpets").val();
+
+    if (smoking === "non-smoking" && pets === "has pets") {
+      Roommates.findAll({
+        where: {
+          smoking: 0,
+          pets: 1
+        }
+      });
+    } else if (smoking === "non-smoking" && pets === "no pets") {
+      Roommates.findAll({
+        where: {
+          smoking: 0,
+          pets: 0
+        }
+      });
+    } else if (smoking === "smoking" && pets === "has pets") {
+      Roommates.findAll({
+        where: {
+          smoking: 1,
+          pets: 1
+        }
+      });
+    } else if (smoking === "smoking" && pets === "no pets") {
+      Roommates.findAll({
+        where: {
+          smoking: 1,
+          pets: 0
+        }
+      });
     };
-  
-    var survey = new Survey.Model(surveyJSON);
-    $("#surveyContainer").Survey({
-      model: survey,
-      onComplete: sendDataToServer
-    });
-  });
-  
-  //code for getting roommate profiles -- incomplete
-  function getRoommates() {
-    $.get("/api/roommmates", function(data) {
-      console.log("Roommates", data);
-      roommates = data;
-        initializeRows();
-    });
-  }
-  // incomplete
-  function initializeRows() {
-    roommateContainer.empty();
-    var roommatesToAdd = [];
-    for (var i = 0; i < roommates.length; i++) {
-      roommatesToAdd.push(createNewRow(posts[i]));
-    }
-    roommateContainer.append(roommatesToAdd);
-  }
-  
-  
-  
-  //code for search function
-  //layout: 2 dropdowns on top of page above an array of roommate profiles
-  //WILL THIS WORK AT ALL IDK ??? 
-  //re-do this as a query string to our api, can't have any sequelize on client side
-  
-  /*var smoking = $("#searchfieldsmoking").val();
-  var pets = $("#searchfieldpets").val();
-  
-  if (smoking === "non-smoking" && pets === "has pets") {
-    Roommates.findAll({
-      where: {
-        smoking: 0,
-        pets: 1
-      }
-    });
-  } else if (smoking === "non-smoking" && pets === "no pets") {
-    Roommates.findAll({
-      where: {
-        smoking: 0,
-        pets: 0
-      }
-    });
-  } else if (smoking === "smoking" && pets === "has pets") {
-    Roommates.findAll({
-      where: {
-        smoking: 1,
-        pets: 1
-      }
-    });
-  } else if (smoking === "smoking" && pets === "no pets") {
-    Roommates.findAll({
-      where: {
-        smoking: 1,
-        pets: 0
-      }
-    });
-  };
-  */
-  
-  
-  
-  </script>
+
+    */ -->
 
 
 
