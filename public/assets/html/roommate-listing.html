@@ -12,10 +12,10 @@
 <script src="https://surveyjs.azureedge.net/1.0.22/survey.jquery.min.js"></script>
 
 <body>
-    <div class="jumbotron">
-        <h1 style="text-align:center">Meet Your New Roommate Today!</h1>
-      </div>
-  
+  <div class="jumbotron">
+    <h1 style="text-align:center">Meet Your New Roommate Today!</h1>
+  </div>
+
   <div class="container">
     <div class="row">
       <div id="roommateContainer" class="col-md-4">
@@ -64,11 +64,16 @@
            What is your personality type? ${data[0].personality}<br>
            Do you have kids? ${data[0].kids}<br>
            How much free time do you have? ${data[0].freetime}<br>
-           Do you work from home? ${data[0].wfh}</p>
+           Do you work from home? ${data[0].wfh}<br><br></p>
+           <div class="btn-group-sm" role="group" aria-label="...">
+          <button type="button" class="btn btn-default">Update Image</button>
+          <button type="button" class="btn btn-danger">Delete Profile</button>
+        </div>
       </div>
-      <div>
-    </div>
-      </div>`
+    <div>
+
+  </div>
+</div>`
           );
         }
 
@@ -78,4 +83,5 @@
 
   });
 </script>
+
 </html>
