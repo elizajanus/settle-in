@@ -4,6 +4,7 @@ $(document).ready(function () {
 
 $("#add-btn").on("click", function (event) {
   event.preventDefault();
+  
 
   // make a sublet obj
   var newRental = {
