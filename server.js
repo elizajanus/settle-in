@@ -6,7 +6,7 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
-var exphbs = require("express-handlebars");
+//var exphbs = require("express-handlebars");
 
 
 
@@ -17,10 +17,10 @@ var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./models");
-app.engine("handlebars", exphbs({
+/*app.engine("handlebars", exphbs({
   defaultLayout: "main"
 }));
-app.set("view engine", "handlebars");
+app.set("view engine", "handlebars");*/
 
 // Sets up the Express app to handle data parsing
 
