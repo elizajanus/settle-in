@@ -17,7 +17,9 @@ var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./models");
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs({
+  defaultLayout: "main"
+}));
 app.set("view engine", "handlebars");
 
 // Sets up the Express app to handle data parsing

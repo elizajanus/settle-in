@@ -1,37 +1,15 @@
 var db = require("../models");
 
-// need to review what the database is called before uploading it
 module.exports = function (app) {
+
+  // This is supposed to query just user searches, but not sure about URL name.
   app.get("/api/rentals", function (req, res) {
-    db.Rental.findAll({}).then(function (dbRental) {
-      res.json(dbRental);
+    console.log("api", req.query);
+    db.Rental.findAll({
+      where: req.query
+    }).then(function (results) {
+      res.json(results);
     });
   });
 
-  app.get("/api/rentals/:id", function (res, req) {
-    db.Rental.findOne({
-      where: {
-        id: req.params.id
-      }
-    }).then(function (dbRental) {
-      res.json(dbRental);
-    });
-  });
-
-  app.post("/api/rentals", function (req, res) {
-    console.log(req.body);
-    db.Rental.create(req.body).then(function (dbRental) {
-      res.json(dbRental);
-    });
-  });
-
-  app.delete("api/rentals/:id", function (req, res) {
-    db.Rental.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(function (dbRental) {
-      res.json(dbRental);
-    });
-  });
-};
+}
