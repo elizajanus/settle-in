@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Your platform (jquery) scripts. -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
   crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-  crossorigin="anonymous">
-
+  crossorigin="anonymous"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="https://surveyjs.azureedge.net/1.0.22/survey.css" type="text/css" rel="stylesheet" />
 <script src="https://surveyjs.azureedge.net/1.0.22/survey.jquery.min.js"></script>
@@ -20,14 +22,13 @@
     <div class="row">
       <div id="roommateContainer" class="col-md-4">
 
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-
 </body>
 
 <script>
-  $(document).ready(function () {
+  $(document).ready(function() {
 
     function getRoommates() {
       $.get("/api/roommates", function (data) {
@@ -40,7 +41,7 @@
       </div>
       <div class="panel-body">
         <p>
-          <img src="${data[0].image}" height="300" width="auto" hspace="20"><br><br>
+          <img src="${data[0].image}" height="auto" width="300" hspace="20"><br><br>
           Email: <a href="mailto:${data[0].email}">${data[0].email}</a><br>
            Age: ${data[0].age}<br>
            Phone: ${data[0].phone}<br>
@@ -66,8 +67,58 @@
            How much free time do you have? ${data[0].freetime}<br>
            Do you work from home? ${data[0].wfh}<br><br></p>
            <div class="btn-group-sm" role="group" aria-label="...">
-          <button type="button" class="btn btn-default">Update Image</button>
-          <button type="button" class="btn btn-danger">Delete Profile</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#update-image">Update Profile Image</button>
+
+<div class="modal fade" id="update-image" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Enter Profile Image URL</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="imageURL">Image URL</label>
+                <input type="text" class="form-control" id="imageURL" placeholder="Image URL">
+              </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" id="updateURL">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<button type="button" class="btn btn-danger btn-primary" data-toggle="modal", data-target="#deleteModal">Delete Profile</button>
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Enter Roommate ID to Delete</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="idInput">ID</label>
+                <input type="text" class="form-control" id="idInput" placeholder="ID Input">
+              </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" id="deleteButton">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
         </div>
       </div>
     <div>
@@ -79,7 +130,37 @@
 
       });
     };
+
+$("#deleteButton").on("click", function() {
+    console.log("what is going on");
+    var id = $("#idInput").val();
+    $.ajax({
+      method: "DELETE",
+      url: "/api/roommates/" + id
+    })
+    .then(getRoommates);
+    $.delete("/api/roommates/:id", function(data) {
+      
+  });
+});
+
+$("#imageURL").on("click", function(data) {
+    console.log("what is going on");
+    var id = $(this).id;
+    var imageURL = $("#imageURL").val();
+    $.ajax({
+      method: "PUT",
+      url: "/api/roommates/" + id,
+      data: imageURL
+    })
+    .then(getRoommates);
+    $.put("/api/roommates/:id", function(data) {
+      console.log(url);
+  });
+});
+
     getRoommates();
+    
 
   });
 </script>
