@@ -26,15 +26,7 @@ module.exports = function(sequelize, DataTypes) {
       kids: {type: DataTypes.BOOLEAN, defaultValue: false},
       freetime: {type: DataTypes.STRING, defaultValue: "None"},
       wfh: {type: DataTypes.BOOLEAN, defaultValue: false}
-    }, {timestamps: true,
-    createdAt: {
-      field: 'beginTime',
-      defaultValue: sequelize.literal('NOW()'),
-    },
-    updatedAt: {
-      field: 'beginTime',
-      defaultValue: sequelize.literal('NOW()'),
-    }
+  
     });
       return Roommate;  
   };

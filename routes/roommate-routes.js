@@ -1,6 +1,14 @@
 var db = require("../models");
 
 module.exports = function(app) {
+
+  /*app.get("/roommateslisting", function(req,res) {
+    db.Roommate.findAll({
+    }).then(function(dbRoommate) {
+      res.json(dbRoommate);
+    })
+  });
+*/
   app.get("/api/roommates", function(req, res) {
 
     db.Roommate.findAll({
