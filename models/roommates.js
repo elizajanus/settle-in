@@ -25,8 +25,9 @@ module.exports = function(sequelize, DataTypes) {
       personality: {type: DataTypes.STRING, defaultValue: "None"},
       kids: {type: DataTypes.BOOLEAN, defaultValue: false},
       freetime: {type: DataTypes.STRING, defaultValue: "None"},
-      wfh: {type: DataTypes.BOOLEAN, defaultValue: false}
-  
+      wfh: {type: DataTypes.BOOLEAN, defaultValue: false},
+      createdAt: DataTypes.DATE,
+      updatedAt: DataTypes.DATE
     });
       return Roommate;  
   };
