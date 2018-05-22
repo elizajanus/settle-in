@@ -57,7 +57,9 @@ footer.page-footer {
     height: 1000px;
 }
 
-
+.bold {
+    font-weight: bold;
+}
 
 .settlein {
 
