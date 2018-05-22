@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<!-- Your platform (jquery) scripts. -->
+<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+  crossorigin="anonymous"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://surveyjs.azureedge.net/1.0.22/survey.css" type="text/css" rel="stylesheet" />
+<script src="https://surveyjs.azureedge.net/1.0.22/survey.jquery.min.js"></script>
+</head>
+	<body>
+		{{{ body }}}
+	</body>
+
+
+
+	<script>
+$("#deleteButton").on("click", function() {
+    console.log("what is going on");
+    var id = $("#idInput").val();
+    $.ajax({
+      method: "DELETE",
+      url: "/api/roommates/" + id
+    })
+    .then()
+    $.delete("/api/roommates/:id", function(data) {
+      
+  });
+});
+
+$("#imageURL").on("click", function(data) {
+    console.log("what is going on");
+    var id = $(this).id;
+    var imageURL = $("#imageURL").val();
+    $.ajax({
+      method: "PUT",
+      url: "/api/roommates/" + id,
+      data: imageURL
+    })
+    .then();
+    $.put("/api/roommates/:id", function(data) {
+      console.log(url);
+  });
+});
+
+
+
+
+	</script>
+</html>

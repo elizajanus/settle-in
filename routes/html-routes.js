@@ -48,7 +48,7 @@ module.exports = function (app) {
   });
 
   app.get("/roommateslisting", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/assets/html/roommate-listing.html"));
+    res.render(path.join(__dirname, "../views/index.handlebars"));
   });
 
   app.get("/roommates", function (req, res) {
