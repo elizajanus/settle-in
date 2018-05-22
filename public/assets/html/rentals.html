@@ -14,12 +14,12 @@
     <link href="https://fonts.googleapis.com/css?family=Exo:700" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
-    <link rel="stylesheet" href="../css/apartment.css">
+    <link rel="stylesheet" href="/assets/css/apartment.css">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
-    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 </head>
@@ -28,7 +28,7 @@
     <nav class="grey lighten-5" role="navigation">
         <div class="nav-wrapper container grey lighten-5">
             <a id="logo-container" href="#" class="brand-logo">
-                <img class="settlein" src="../images/logo1.png" alt="">
+                <img class="settlein" src="/assets/images/logo1.png" alt="">
             </a>
             <ul class="right hide-on-med-and-down">
                 <li>
@@ -72,13 +72,13 @@
             </div>
         </div>
         <div class="parallax">
-            <img class="back" src="../images/richmond.jpg" alt="Unsplashed background img 1">
+            <img class="back" src="/assets/images/richmond.jpg" alt="Unsplashed background img 1">
         </div>
     </div>
 
 
     <div class="container ">
-        <div class="section grey lighten-3 z-depth-5 " id="searchResults">
+        <div class="section grey lighten-3 z-depth-5 "  id="searchForm">
 
             <!--   Icon Section   -->
             <div class="container">
@@ -90,25 +90,26 @@
                             <div class="row">
                                 <div class="input-field col s3">
                                     <input id="cityName" type="text" class="validate">
-                                    <label for="city">City</label>
+                                    <label for="cityName">City</label>
                                 </div>
                                 <div class="input-field col s3">
                                     <input id="stateName" type="text" class="validate">
-                                    <label for="state">State</label>
+                                    <label for="stateName">State</label>
                                 </div>
                                 <div class="input-field col s3">
                                     <input id="price" type="text" class="validate">
                                     <label for="price">Price</label>
                                 </div>
-                                <div class="input-field col3">
-                                    <a class="waves-effect waves-light btn-large" id="submit-btn">Submit</a>
+                                <div class="input-field col s3">
+                                    <a class="waves-effect waves-light btn" id="submit-btn">Submit</a>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-
-    </div>
+        </div>
+        <div style="margin:50px" class="row" id="searchResults">
+        </div>
     </div>
 
 
@@ -127,7 +128,7 @@
                 </div>
             </div>
             <div class="parallax">
-                <img class="back" src="../images/richmond3.jpg" alt="Unsplashed background img 2">
+                <img class="back" src="/assets/images/richmond3.jpg" alt="Unsplashed background img 2">
             </div>
         </div>
 
@@ -164,12 +165,11 @@
             <!--  Scripts-->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
-        <script type="text/javascript" src="../js/home.js"></script>
-        <script type="text/javascript" src="../js/rentals.js"></script>
+        <script type="text/javascript" src="/assets/js/home.js"></script>
+        <script type="text/javascript" src="/assets/js/rentals.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
-                $(".slider").slider();
                 $("#submit-btn").on("click", function(event) {
                     event.preventDefault();
         
@@ -189,28 +189,28 @@
                     console.log("client", newQuery);
         
                     $.get("/api/rentals", newQuery, function (data) {
-                        if (data) {
+                        $("#searchResults").html("");
+                        if (data.length > 0) {
                             console.log("response", data);
-        
                             $.map(data, function(item) {
-                                $("#searchResults).append(`
-                                    <div class="card">
+                                $("#searchResults").append(`
+                                    <div class="card col s12 m6 l4">
                                         <div class="card-image">
                                             <div class="slider">
                                                 <ul class="slides">
-                                                    <li><img src="${item.imageOne}"></li>
-                                                    <li><img src="${item.imageTwo}"></li>
-                                                    <li><img src="${item.imageThree}"></li>
-                                                    <li><img src="${item.imageFour}"></li>
+                                                    <li><img src="${item.imageOne}"/></li>
+                                                    <li><img src="${item.imageTwo}"/></li>
+                                                    <li><img src="${item.imageThree}"/></li>
+                                                    <li><img src="${item.imageFour}"/></li>
                                                 </ul>
                                             </div>
                                         </div>
         
                                         <div class="card-content">
                                             <p>
-                                                <strong>Address:</strong> ${item.streetAddress1} ${item.streetAddress2} ${item.cityName}, ${item.stateName} ${item.zipCode}
+                                                <strong>Address:</strong> ${item.streetAddress1} ${!item.streetAddress2 ? '' : item.streetAddress2} ${item.cityName}, ${item.stateName} ${item.zipCode}
                                                 <br>
-                                                <strong>Rent:</strong> ${item.price}
+                                                <strong>Rent:</strong> $${item.price}
                                                 <br>
                                                 <strong>Beds:</strong> ${item.beds}
                                                 <br>
@@ -222,24 +222,25 @@
                                                 <br>
                                                 <strong>Managed by:</strong> ${item.landlord}
                                                 <br>
-                                                <strong>Contact Info:</strong> ${data.managementContactInfo}
+                                                <strong>Contact Info:</strong> ${item.managementContactInfo}
                                             </p>
                                         </div>
                                     </div>
                                 `)
         
-                                $("#cityName).val("");
-                                $("#stateName).val("");
+                                $("#cityName").val("");
+                                $("#stateName").val("");
                                 $("#price").val("");
                             });
+                            $(".slider").slider();
                         } else {
-                            $.map(data, function(item) {
-                                $("#searchResults).append(`
-                                    <p>Please try again or click Submit to see all available listings.</p>
-                                `)
-                            });
+                            $("#searchResults").append(`
+                                <div class="container">
+                                <h3>Please try again or click Submit to see all available listings.</h3>
+                                </div>
+                            `)
                         }
-                    }
+                    });
                 });
             });
         </script>
