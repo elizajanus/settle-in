@@ -2,6 +2,7 @@ $(document).ready(function () {
   $(".slider").slider();
 });
 
+
 $("#add-btn").on("click", function (event) {
   event.preventDefault();
   

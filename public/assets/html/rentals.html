@@ -1,812 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Rentals</title>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Rentals</title>
 
-    <!-- CSS  -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Exo:700" rel="stylesheet">
+        <!-- CSS  -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Exo:700" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
-    <link rel="stylesheet" href="../css/apartment.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
+        <link rel="stylesheet" href="../css/apartment.css">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
-    <link rel="manifest" href="../favicon/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-</head>
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+        <link rel="manifest" href="../favicon/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    </head>
 
-<body>
-    <nav class="grey lighten-5" role="navigation">
-        <div class="nav-wrapper container grey lighten-5">
-            <a id="logo-container" href="#" class="brand-logo">
-                <img class="settlein" src="../images/logo1.png" alt="">
-            </a>
-            <ul class="right hide-on-med-and-down">
-                <li>
-                    <a href="#">Navbar Link</a>
-                </li>
-            </ul>
+    <body>
+        <nav class="grey lighten-5" role="navigation">
+            <div class="nav-wrapper container grey lighten-5">
+                <a id="logo-container" href="#" class="brand-logo">
+                    <img class="settlein" src="../images/logo1.png" alt="">
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="#">Navbar Link</a>
+                    </li>
+                </ul>
 
-            <ul id="nav-mobile" class="sidenav">
-                <li>
-                    <a href="#">Navbar Link</a>
-                </li>
-            </ul>
-            <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-                <i class="material-icons">menu</i>
-            </a>
-        </div>
-    </nav>
-
-    <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <br>
-                <br>
-
-
-                <div class="row center">
-
-                    <h3 class="header col s12 light white-text headerfont">Are You Looking For A Place to Settle In?</h3>
-                    <h3 class="header col s12 light white-text headerfont">Search below to find your perfect apartment or house.</h3>
-
-                </div>
-
-                <br>
-                <br>
-
+                <ul id="nav-mobile" class="sidenav">
+                    <li>
+                        <a href="#">Navbar Link</a>
+                    </li>
+                </ul>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
             </div>
-        </div>
-        <div class="parallax">
-            <img class="back" src="../images/richmond.jpg" alt="Unsplashed background img 1">
-        </div>
-    </div>
+        </nav>
+
+        <div id="index-banner" class="parallax-container">
+            <div class="section no-pad-bot">
+                <div class="container">
+                    <br>
+                    <br>
 
 
-    <div class="container ">
-        <div class="section grey lighten-3 z-depth-5 ">
+                    <div class="row center">
 
-            <!--   Icon Section   -->
-            <div class="row">
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="slider">
-                                <ul class="slides">
-                                    <li>
-                                        <img src="../images/1712LakeviewAve1.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/1712LakeviewAve2.jpg">
-                                        <!-- random image -->
-                                        <div class="caption left-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/1712LakeviewAve3.jpg">
-                                        <!-- random image -->
-                                        <div class="caption right-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/1712LakeviewAve7.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            </a>
-                        </div>
-                        <span class="card-title center">1712 Lakeview Avenue</span>
-                        <div class="card-content">
-                            <p>This house is not like the other houses you see in the fan area. It was built in 2005 so it has the feel of a modern home and the amenities you'd expect.
-                                    Just a mile from the VCU commons, walking distance to many of the restaurants and bars in the fan. It's a great house in a great spot!
-                                <br>
-                                <strong>Rent:</strong> 400
-                                <br>
-                                <strong>Beds:</strong> 3
-                                <br>
-                                <strong>Baths:</strong> 2.5
-                                <br>
-                                <strong>Square Feet:</strong> 1800
-                                <br>
-                                <strong>Pets Allowed:</strong> Yes
-                                <br>
-                                <strong>Location:</strong> 1712 Lakeview Ave Richmond, VA 23220
-                                <br>
-                                <strong>Managed by:</strong> Angela Shrute (804) 555-5000</p>
-                        </div>
+                        <h3 class="header col s12 light white-text headerfont">Are You Looking For A Place to Settle In?</h3>
+                        <h3 class="header col s12 light white-text headerfont">Search below to find your perfect apartment or house.</h3>
+
                     </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="slider">
-                                <ul class="slides">
-                                    <li>
-                                        <img src="../images/1720GroveAveApt1_1.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/1720GroveAveApt1_2.jpg">
-                                        <!-- random image -->
-                                        <div class="caption left-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/1720GroveAveApt1_3.jpg">
-                                        <!-- random image -->
-                                        <div class="caption right-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/1720GroveAveApt1_4.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            </a>
-                        </div>
-                        <span class="card-title center">1720 Grove Ave Apt 1</span>
-                        <div class="card-content">
-                            <p>Awesome location and unit on one of the nicest streets in downtown Richmond. First floor apartment. Walking distance to great restaurants and venues!!
-                                <br>
-                                <strong>Rent:</strong> 1500
-                                <br>
-                                <strong>Beds:</strong> 2
-                                <br>
-                                <strong>Baths:</strong> 1
-                                <br>
-                                <strong>Square Feet:</strong> 1200
-                                <br>
-                                <strong>Pets Allowed:</strong> Yes
-                                <br>
-                                <strong>Location:</strong> 1720 Grove Ave, Apartment 1 Richmond, VA 23220
-                                <br>
-                                <strong>Managed by:</strong> Feinstein Inc (804) 555-1234</p>
-                        </div>
-                    </div>
-                </div>
 
+                    <br>
+                    <br>
 
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="slider">
-                                <ul class="slides">
-                                    <li>
-                                        <img src="../images/1820BufordRd1.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/1820BufordRd2.jpg">
-                                        <!-- random image -->
-                                        <div class="caption left-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/1820BufordRd3.jpg">
-                                        <!-- random image -->
-                                        <div class="caption right-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/1820BufordRd4.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            </a>
-                        </div>
-                        <span class="card-title center">411 S Harrison</span>
-                        <div class="card-content">
-                            <p>Three level home for rent, over 2,000 Sq ft. Walking distance to Virginia Commonwealth College ( VCU ), 4 bedrooms, 3 1/2 bath, two master bedrooms, garage, deck.
-                                <br>
-                                <strong>Rent:</strong> 2000
-                                <br>
-                                <strong>Beds:</strong> 4
-                                <br>
-                                <strong>Baths:</strong> 3.5
-                                <br>
-                                <strong>Square Feet:</strong> 1200
-                                <br>
-                                <strong>Pets Allowed:</strong> No
-                                <br>
-                                <strong>Location:</strong> 411 S Harrison St Richmond, VA 23220
-                                <br>
-                                <strong>Managed by:</strong> Angela Shrute (804) 555-5000</p>
-
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="slider">
-                                <ul class="slides">
-                                    <li>
-                                        <img src="../images/2710EBroadSt1.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/2710EBroadSt2.jpg">
-                                        <!-- random image -->
-                                        <div class="caption left-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/2710EBroadSt3.jpg">
-                                        <!-- random image -->
-                                        <div class="caption right-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/2710EBroadSt4.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            </a>
-                        </div>
-                        <span class="card-title center">2710 E Broad St</span>
-                        <div class="card-content">
-                            <p>Three level home for rent, over 2,000 Sq ft. Walking distance to Virginia Commonwealth College ( VCU ), 4 bedrooms, 3 1/2 bath, two master bedrooms, garage, deck.
-                                <br>
-                                <strong>Rent:</strong> 1500
-                                <br>
-                                <strong>Beds:</strong> 2
-                                <br>
-                                <strong>Baths:</strong> 1
-                                <br>
-                                <strong>Square Feet:</strong> 2000
-                                <br>
-                                <strong>Pets Allowed:</strong> Yes
-                                <br>
-                                <strong>Location:</strong> 2710 E Broad St Richmond, VA 23223
-                                <br>
-                                <strong>Managed by:</strong> April Ludgate (804) 555-5432</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="slider">
-                                <ul class="slides">
-                                    <li>
-                                        <img src="../images/411SHarrisonSt1.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/411SHarrisonSt2.jpg">
-                                        <!-- random image -->
-                                        <div class="caption left-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/411SHarrisonSt3.jpg">
-                                        <!-- random image -->
-                                        <div class="caption right-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/411SHarrisonSt4.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            </a>
-                        </div>
-                        <span class="card-title center">1820 Buford Rd</span>
-                        <div class="card-content">
-                            <p>Pristine Home in Historic Bon Air! Park-Like Setting-Wildlife Habitat - This all brick ranch style home was meticulously cared for. The owner has cultivated a serene refuge with many wild birds, a butterfly garden and more.
-                                <br>
-                                <strong>Rent:</strong> 1500
-                                <br>
-                                <strong>Beds:</strong> 2
-                                <br>
-                                <strong>Baths:</strong> 1
-                                <br>
-                                <strong>Square Feet:</strong> 1800
-                                <br>
-                                <strong>Pets Allowed:</strong> Yes
-                                <br>
-                                <strong>Location:</strong> 1820 Buford Road N. Chesterfield, VA 23236
-                                <br>
-                                <strong>Managed by:</strong> Gary Gergich (804) 555-1365</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="slider">
-                                <ul class="slides">
-                                    <li>
-                                        <img src="../images/5008Coachmans1.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/5008Coachmans10.jpg">
-                                        <!-- random image -->
-                                        <div class="caption left-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/5008Coachmans2.jpg">
-                                        <!-- random image -->
-                                        <div class="caption right-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/5008Coachmans4.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            </a>
-                        </div>
-                        <span class="card-title center">9101 Stony Point Parkway</span>
-                        <div class="card-content">
-                            <p>Our beautifully crafted apartment homes will feature granite counters, stainless steel appliances, full sized washer and dryers, spacious walk-in closets and much more! 
-                                <br>
-                                <strong>Rent:</strong> 1800
-                                <br>
-                                <strong>Beds:</strong> 3
-                                <br>
-                                <strong>Baths:</strong> 2
-                                <br>
-                                <strong>Square Feet:</strong> 1500
-                                <br>
-                                <strong>Pets Allowed:</strong> Yes
-                                <br>
-                                <strong>Location:</strong> 9101 Stony Point Pkway. Richmond, VA 23235
-                                <br>
-                                <strong>Managed by:</strong> Dunder Mifflin (804) 555-9876</p>
-                    </div>
-                    </div>
-                </div>
-
-
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="slider">
-                                <ul class="slides">
-                                    <li>
-                                        <img src="../images/525N32ndSt1.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/525N32ndSt2.jpg">
-                                        <!-- random image -->
-                                        <div class="caption left-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/525N32ndSt3.jpg">
-                                        <!-- random image -->
-                                        <div class="caption right-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/525N32ndSt4.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            </a>
-                        </div>
-                        <span class="card-title center">400 Wadsworth Drive</span>
-                        <div class="card-content">
-                            <p> Rent this beautiful home with: First Floor Master Suite, Plenty Of Natural Light, Updated Eat-In-Kitchen with Range, Fridge, and Dishwasher
-                                <br>
-                                <strong>Rent:</strong> 1300
-                                <br>
-                                <strong>Beds:</strong> 3
-                                <br>
-                                <strong>Baths:</strong> 2
-                                <br>
-                                <strong>Square Feet:</strong> 1526
-                                <br>
-                                <strong>Pets Allowed:</strong> No
-                                <br>
-                                <strong>Location:</strong> 400 Wadsworth Drive N. Chesterfield, VA 23236
-                                <br>
-                                <strong>Managed by:</strong> Maurice Moss (804) 555-0000</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="slider">
-                                <ul class="slides">
-                                    <li>
-                                        <img src="../images/CedarBroad1.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/CedarBroad10.jpg">
-                                        <!-- random image -->
-                                        <div class="caption left-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/CedarBroad2.jpg">
-                                        <!-- random image -->
-                                        <div class="caption right-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/CedarBroad4.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            </a>
-                        </div>
-                        <div class="card-content">
-                                <span class="card-title center">4501 Marshall Run Circle </span>
-                                <div class="card-content">
-                                    <p>Hardwood floors, cathedral ceilings, and beautiful landscaping will having you signing your lease ASAP. 
-                                        <br>
-                                        <strong>Rent:</strong> 1400
-                                        <br>
-                                        <strong>Beds:</strong> 2
-                                        <br>
-                                        <strong>Baths:</strong> 1
-                                        <br>
-                                        <strong>Square Feet:</strong> 938
-                                        <br>
-                                        <strong>Pets Allowed:</strong> No
-                                        <br>
-                                        <strong>Location:</strong> 4501 Marshall Crun Circle Glen Allen, VA 23059
-                                        <br>
-                                        <strong>Managed by:</strong> RVApts (804) 555-7777</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="slider">
-                                <ul class="slides">
-                                    <li>
-                                        <img src="../images/JamesRiveratStonyPoint1.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/JamesRiveratStonyPoint2.jpg">
-                                        <!-- random image -->
-                                        <div class="caption left-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/JamesRiveratStonyPoint3.jpg">
-                                        <!-- random image -->
-                                        <div class="caption right-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/JamesRiveratStonyPoint4.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            </a>
-                        </div>
-                        <div class="card-content">
-                                <span class="card-title center">5008 Coachmans Carriage Terrace </span>
-                                <div class="card-content">
-                                    <p>Highly desirable location in Twin Hickory, just minutes from I-295, I-95, I-64, I-288, Innsbrook and the Short Pump Area. Brick (front), spacious 4-5 BR/3.5 BA with fenced in yard and two car detached garage and private drive. 
-                                        <br>
-                                        <strong>Rent:</strong> 2500
-                                        <br>
-                                        <strong>Beds:</strong> 4
-                                        <br>
-                                        <strong>Baths:</strong> 5.5
-                                        <br>
-                                        <strong>Square Feet:</strong> 3214
-                                        <br>
-                                        <strong>Pets Allowed:</strong> Yes
-                                        <br>
-                                        <strong>Location:</strong> 5008 Coachmans Carriage Terrace Glen Allen, VA 23059
-                                        <br>
-                                        <strong>Managed by:</strong> Maurice Moss (804) 555-0000</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="slider">
-                                <ul class="slides">
-                                    <li>
-                                        <img src="../images/Manchester2.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/Manchester10.jpg">
-                                        <!-- random image -->
-                                        <div class="caption left-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/Manchester1.jpg">
-                                        <!-- random image -->
-                                        <div class="caption right-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/Manchester3.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            </a>
-                        </div>
-                        <div class="card-content">
-                        <span class="card-title center">525 N 32nd St </span>
-                        <div class="card-content">
-                            <p>Four large bedrooms 3 full baths, one on first floor. Front Porch and Formal dining room. large unfinished basement. fenced back yard. 
-                                <br>
-                                <strong>Rent:</strong> 2000
-                                <br>
-                                <strong>Beds:</strong> 4
-                                <br>
-                                <strong>Baths:</strong> 3
-                                <br>
-                                <strong>Square Feet:</strong> 2336
-                                <br>
-                                <strong>Pets Allowed:</strong> No
-                                <br>
-                                <strong>Location:</strong>525 N 32nd St Richmond, VA 23223
-                                <br>
-                                <strong>Managed by:</strong> Gary Gergich (804) 555-1365</p>
-                    </div>
-                    </div>
-                </div>
-
-
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="slider">
-                                <ul class="slides">
-                                    <li>
-                                        <img src="../images/MarshallSpringsatGaytonW10.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/MarshallSpringsatGaytonW2.jpg">
-                                        <!-- random image -->
-                                        <div class="caption left-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/MarshallSpringsatGaytonW1.jpg">
-                                        <!-- random image -->
-                                        <div class="caption right-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/MarshallSpringsatGaytonW3.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            </a>
-                        </div>
-                        <span class="card-title center">1820 E Broad St </span>
-                        <div class="card-content">
-                            <p>In the middle of everything, these apartments with balconies, city views, and a refreshing pool are calling your name.
-                                <br>
-                                <strong>Rent:</strong> 1300
-                                <br>
-                                <strong>Beds:</strong> 2
-                                <br>
-                                <strong>Baths:</strong> 2
-                                <br>
-                                <strong>Square Feet:</strong> 726
-                                <br>
-                                <strong>Pets Allowed:</strong> No
-                                <br>
-                                <strong>Location:</strong>525 N 32nd St Richmond, VA 23223
-                                <br>
-                                <strong>Managed by:</strong> Angela Shrute (804) 555-5000</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="slider">
-                                <ul class="slides">
-                                    <li>
-                                        <img src="../images/the-james-richmond-va-building-photo (2).jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/the-james-richmond-va-bathroom.jpg">
-                                        <!-- random image -->
-                                        <div class="caption left-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/the-james-richmond-va-bedroom.jpg">
-                                        <!-- random image -->
-                                        <div class="caption right-align">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="../images/the-james-richmond-va-building-photo (1).jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            </a>
-                        </div>
-                        <span class="card-title center">1315 McDonough St Apt A </span>
-                        <div class="card-content">
-                            <p>Offering an open floorplan and private off street parking, this two bedroom condo is not to be missed.
-                                <br>
-                                <strong>Rent:</strong> 1400
-                                <br>
-                                <strong>Beds:</strong> 2
-                                <br>
-                                <strong>Baths:</strong> 2
-                                <br>
-                                <strong>Square Feet:</strong> 1125
-                                <br>
-                                <strong>Pets Allowed:</strong> No
-                                <br>
-                                <strong>Location:</strong>1315 McDonough St Apt A Richmond, VA 23224
-                                <br>
-                                <strong>Managed by:</strong> RVApts (804) 555-7777</p>
-                    </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-
-
-        </div>
-
-    </div>
-    </div>
-
-
-    <div class="parallax-container valign-wrapper">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <div class="row center">
-                    <h5 class="header col s12 light">Didn't find what you were looking for? Try one of the following links.</h5>
-
-
-                </div>
-                <div class="row center">
-                    <a href="sublets.html" id="download-button" class="btn-large waves-effect waves-light blue darken-3 ">Find a sublet</a>
-                    <a href="roommate-home.html" id="download-button" class="btn-large waves-effect waves-light blue darken-3 ">Find a roommate</a>
                 </div>
             </div>
+            <div class="parallax">
+                <img class="back" src="../images/richmond.jpg" alt="Unsplashed background img 1">
+            </div>
         </div>
-        <div class="parallax">
-            <img class="back" src="../images/richmond3.jpg" alt="Unsplashed background img 2">
-        </div>
-    </div>
 
-    <footer class="page-footer blue darken-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col l12 s12">
-                        <h5 class="white-text center">SettleIn</h5>
-                        <p class="grey-text text-lighten-4">SettleIn was built with the renter in mind. Cut down on the time you spend searching website after website for
-                            outdated posts and unreliable information. With SettleIn, you can rest assured that you'll will find the best match for your roommates and your apartment
-                            or house. This website will always reflect current and vetted postings for apartments. Coming soon: reviews on Landlords and Management Companies. Be sure to check
-                            in soon to see just how your potential landlord stacks up!
-                        </p>
+
+        <div class="container ">
+            <div class="section grey lighten-3 z-depth-5 ">
+
+                <!--   Icon Section   -->
+                
+
+        </div>
+        </div>
+
+
+        <div class="parallax-container valign-wrapper">
+            <div class="section no-pad-bot">
+                <div class="container">
+                    <div class="row center">
+                        <h5 class="header col s12 light">Didn't find what you were looking for? Try one of the following links.</h5>
+
+
+                    </div>
+                    <div class="row center">
+                        <a href="sublets.html" id="download-button" class="btn-large waves-effect waves-light blue darken-3 ">Find a sublet</a>
+                        <a href="roommate-home.html" id="download-button" class="btn-large waves-effect waves-light blue darken-3 ">Find a roommate</a>
                     </div>
                 </div>
             </div>
-            <div class="footer-copyright">
-                <div class="container center">
-                    Created by: 
-                    <a class="grey-text text-lighten-3" href="https://github.com/elizajanus">Eliza Janus</a>
-                    |
-                    <a class="grey-text text-lighten-3" href="https://github.com/KarenBrant">Karen Brant</a>
-                    |
-                    <a class="grey-text text-lighten-3" href="https://github.com/koeaves">Katherine Eaves</a>
-                    |
-                    <a class="grey-text text-lighten-3" href="https://github.com/sophbee">Sophia Butterworth</a>
-                    |
-                    <a class="grey-text text-lighten-3" href="https://github.com/Willamponsah">William Amponsah</a>
-                </div>
+            <div class="parallax">
+                <img class="back" src="../images/richmond3.jpg" alt="Unsplashed background img 2">
             </div>
-        </footer>
+        </div>
 
-
-    <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../js/home.js"></script>
-    <script type="text/javascript" src="../js/rental.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
-
-
-
-</body>
-
+        <footer class="page-footer blue darken-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l12 s12">
+                            <h5 class="white-text center">SettleIn</h5>
+                            <p class="grey-text text-lighten-4">SettleIn was built with the renter in mind. Cut down on the time you spend searching website after website for
+                                outdated posts and unreliable information. With SettleIn, you can rest assured that you'll will find the best match for your roommates and your apartment
+                                or house. This website will always reflect current and vetted postings for apartments. Coming soon: reviews on Landlords and Management Companies. Be sure to check
+                                in soon to see just how your potential landlord stacks up!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container center">
+                        Created by: 
+                        <a class="grey-text text-lighten-3" href="https://github.com/elizajanus">Eliza Janus</a>
+                        |
+                        <a class="grey-text text-lighten-3" href="https://github.com/KarenBrant">Karen Brant</a>
+                        |
+                        <a class="grey-text text-lighten-3" href="https://github.com/koeaves">Katherine Eaves</a>
+                        |
+                        <a class="grey-text text-lighten-3" href="https://github.com/sophbee">Sophia Butterworth</a>
+                        |
+                        <a class="grey-text text-lighten-3" href="https://github.com/Willamponsah">William Amponsah</a>
+                    </div>
+                </div>
+            </footer>
+        </body>
 </html>
+            <!--  Scripts-->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../js/home.js"></script>
+        <script type="text/javascript" src="../js/rentals.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".slider").slider();
+                $("#submit-btn").on("click", function(event) {
+                    event.preventDefault();
+        
+                    var cityName = $("#cityName").val().trim();
+                    var stateName = $("#stateName").val().trim();
+                    var price = $("#price").val().trim();
+        
+                    var newQuery = {};
+        
+                    if (cityName !== "")
+                        newQuery.cityName = cityName;
+                    if (stateName !== "")
+                        newQuery.stateName = stateName;
+                    if (price !== "")
+                        newQuery.price = price;
+        
+                    console.log("client", newQuery);
+        
+                    $.get("/api/rentals", newQuery, function (data) {
+                        if (data) {
+                            console.log("response", data);
+        
+                            $.map(data, function(item) {
+                                $("#searchResults).append(`
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <div class="slider">
+                                                <ul class="slides">
+                                                    <li><img src="${item.imageOne}"></li>
+                                                    <li><img src="${item.imageTwo}"></li>
+                                                    <li><img src="${item.imageThree}"></li>
+                                                    <li><img src="${item.imageFour}"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+        
+                                        <div class="card-content">
+                                            <p>
+                                                <strong>Address:</strong> ${item.streetAddress1} ${item.streetAddress2} ${item.cityName}, ${item.stateName} ${item.zipCode}
+                                                <br>
+                                                <strong>Rent:</strong> ${item.price}
+                                                <br>
+                                                <strong>Beds:</strong> ${item.beds}
+                                                <br>
+                                                <strong>Baths:</strong> ${item.baths}
+                                                <br>
+                                                <strong>Square Feet:</strong> ${item.sqFeet}
+                                                <br>
+                                                <strong>Pets Allowed:</strong> ${item.pets}
+                                                <br>
+                                                <strong>Managed by:</strong> ${item.landlord}
+                                                <br>
+                                                <strong>Contact Info:</strong> ${data.managementContactInfo}
+                                            </p>
+                                        </div>
+                                    </div>
+                                `)
+        
+                                $("#cityName).val("");
+                                $("#stateName).val("");
+                                $("#price").val("");
+                            });
+                        } else {
+                            $.map(data, function(item) {
+                                $("#searchResults).append(`
+                                    <p>Please try again or click Submit to see all available listings.</p>
+                                `)
+                            });
+                        }
+                    }
+                });
+            });
+        </script>
+
+    
+
