@@ -16,61 +16,94 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
     <link rel="stylesheet" href="../css/apartment.css">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
-    <nav class="grey lighten-5" role="navigation">
-        <div class="nav-wrapper container grey lighten-5">
-            <a id="logo-container" href="#" class="brand-logo">
-                <img class="settlein" src="../images/logo1.png" alt="">
-            </a>
-            <ul class="right hide-on-med-and-down">
-                <li>
-                    <a href="#">Navbar Link</a>
-                </li>
-            </ul>
+        <nav class="grey lighten-5" role="navigation">
+            <div class="nav-wrapper container grey lighten-5">
+                <a id="logo-container" href="#" class="brand-logo">
+                    <img class="settlein" src="../images/logo1.png" alt="">
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="#">Navbar Link</a>
+                    </li>
+                </ul>
+    
+                <ul id="nav-mobile" class="sidenav">
+                    <li>
+                        <a href="#">Navbar Link</a>
+                    </li>
+                </ul>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
 
-            <ul id="nav-mobile" class="sidenav">
-                <li>
-                    <a href="#">Navbar Link</a>
-                </li>
-            </ul>
-            <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-                <i class="material-icons">menu</i>
-            </a>
+        <div id="index-banner" class="parallax-container">
+                <div class="section no-pad-bot">
+                    <div class="container">
+                        <br>
+                        <br>
+        
+        
+                        <div class="row center">
+        
+                            <h3 class="header col s12 light white-text headerfont">Are You Looking For A Place to Settle In?</h3>
+                            <h3 class="header col s12 light white-text headerfont">Search below to find your perfect apartment or house.</h3>
+        
+                        </div>
+        
+                        <br>
+                        <br>
+        
+                    </div>
+                </div>
+                <div class="parallax">
+                    <img class="back" src="../images/richmond.jpg" alt="Unsplashed background img 1">
+                </div>
+            </div>
+
+    <div class="container">
+        <div class="row">
+            <h3><strong>Search for rentals:</strong></h3>
         </div>
-    </nav>
-
-    <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <br>
-                <br>
-
-
-                <div class="row center">
-
-                    <h3 class="header col s12 light white-text headerfont">Are You Looking For A Place to Settle In?</h3>
-                    <h3 class="header col s12 light white-text headerfont">Search below to find your perfect apartment or house.</h3>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s3">
+                        <input id="cityName" type="text" class="validate">
+                        <label for="city">City</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input id="stateName" type="text" class="validate">
+                        <label for="state">State</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input id="price" type="text" class="validate">
+                        <label for="price">Price</label>
+                    </div>
+                    <div class="input-field col3">
+                        <a class="waves-effect waves-light btn-large" id="submit-btn">Submit</a>
+                    </div>
 
                 </div>
-
-                <br>
-                <br>
-
-            </div>
-        </div>
-        <div class="parallax">
-            <img class="back" src="../images/richmond.jpg" alt="Unsplashed background img 1">
+            </form>
         </div>
     </div>
 
-
     <div class="container ">
-        <div class="section grey lighten-3 z-depth-5 ">
+        <div class="section grey lighten-3 z-depth-5 " id="searchResults">
 
             <!--   Icon Section   -->
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
@@ -78,38 +111,43 @@
                                 <ul class="slides">
                                     <li>
                                         <img src="../images/1712LakeviewAve1.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-
-
-                                        </div>
                                     </li>
                                     <li>
                                         <img src="../images/1712LakeviewAve2.jpg">
-                                        <!-- random image -->
-                                        <div class="caption left-align">
-
-                                        </div>
                                     </li>
                                     <li>
                                         <img src="../images/1712LakeviewAve3.jpg">
-                                        <!-- random image -->
-                                        <div class="caption right-align">
-
-                                        </div>
                                     </li>
                                     <li>
                                         <img src="../images/1712LakeviewAve7.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-
-                                        </div>
                                     </li>
                                 </ul>
                             </div>
-
-
-                            </a>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="slider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="/assets/images/1720GroveAveApt1_1.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/1720GroveAveApt1_2.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/1720GroveAveApt1_3.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/1720GroveAveApt1_4.jpg">
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="card-content">
                             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
@@ -117,540 +155,272 @@
                         </div>
                     </div>
                 </div>
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-image">
-                                <div class="slider">
-                                    <ul class="slides">
-                                        <li>
-                                            <img src="../images/1720GroveAveApt1_1.jpg">
-                                            <!-- random image -->
-                                            <div class="caption center-align">
-
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="../images/1720GroveAveApt1_2.jpg">
-                                            <!-- random image -->
-                                            <div class="caption left-align">
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="../images/1720GroveAveApt1_3.jpg">
-                                            <!-- random image -->
-                                            <div class="caption right-align">
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="../images/1720GroveAveApt1_4.jpg">
-                                            <!-- random image -->
-                                            <div class="caption center-align">
-
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-
-
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                                    little markup to use effectively.</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-image">
-                                <div class="slider">
-                                    <ul class="slides">
-                                        <li>
-                                            <img src="../images/1820BufordRd1.jpg">
-                                            <!-- random image -->
-                                            <div class="caption center-align">
-
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="../images/1820BufordRd2.jpg">
-                                            <!-- random image -->
-                                            <div class="caption left-align">
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="../images/1820BufordRd3.jpg">
-                                            <!-- random image -->
-                                            <div class="caption right-align">
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="../images/1820BufordRd4.jpg">
-                                            <!-- random image -->
-                                            <div class="caption center-align">
-
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-
-
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                                    little markup to use effectively.</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                        <div class="col s12 m4">
-                            <div class="card">
-                                <div class="card-image">
-                                    <div class="slider">
-                                        <ul class="slides">
-                                            <li>
-                                                <img src="../images/2710EBroadSt1.jpg">
-                                                <!-- random image -->
-                                                <div class="caption center-align">
-
-
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="../images/2710EBroadSt2.jpg">
-                                                <!-- random image -->
-                                                <div class="caption left-align">
-
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="../images/2710EBroadSt3.jpg">
-                                                <!-- random image -->
-                                                <div class="caption right-align">
-
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="../images/2710EBroadSt4.jpg">
-                                                <!-- random image -->
-                                                <div class="caption center-align">
-
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-
-                                    </a>
-                                </div>
-                                <div class="card-content">
-                                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                                        little markup to use effectively.</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col s12 m4">
-                            <div class="card">
-                                <div class="card-image">
-                                    <div class="slider">
-                                        <ul class="slides">
-                                            <li>
-                                                <img src="../images/411SHarrisonSt1.jpg">
-                                                <!-- random image -->
-                                                <div class="caption center-align">
-
-
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="../images/411SHarrisonSt2.jpg">
-                                                <!-- random image -->
-                                                <div class="caption left-align">
-
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="../images/411SHarrisonSt3.jpg">
-                                                <!-- random image -->
-                                                <div class="caption right-align">
-
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="../images/411SHarrisonSt4.jpg">
-                                                <!-- random image -->
-                                                <div class="caption center-align">
-
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-
-                                    </a>
-                                </div>
-                                <div class="card-content">
-                                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                                        little markup to use effectively.</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-image">
-                                <div class="slider">
-                                    <ul class="slides">
-                                        <li>
-                                            <img src="../images/5008Coachmans1.jpg">
-                                            <!-- random image -->
-                                            <div class="caption center-align">
-
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="../images/5008Coachmans10.jpg">
-                                            <!-- random image -->
-                                            <div class="caption left-align">
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="../images/5008Coachmans2.jpg">
-                                            <!-- random image -->
-                                            <div class="caption right-align">
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="../images/5008Coachmans4.jpg">
-                                            <!-- random image -->
-                                            <div class="caption center-align">
-
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-
-
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                                    little markup to use effectively.</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-image">
-                                <div class="slider">
-                                    <ul class="slides">
-                                        <li>
-                                            <img src="../images/525N32ndSt1.jpg">
-                                            <!-- random image -->
-                                            <div class="caption center-align">
-
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="../images/525N32ndSt2.jpg">
-                                            <!-- random image -->
-                                            <div class="caption left-align">
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="../images/525N32ndSt3.jpg">
-                                            <!-- random image -->
-                                            <div class="caption right-align">
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="../images/525N32ndSt4.jpg">
-                                            <!-- random image -->
-                                            <div class="caption center-align">
-
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-
-
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                                    little markup to use effectively.</p>
-                            </div>
-                        </div>
-                    </div>
-
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
                             <div class="slider">
                                 <ul class="slides">
                                     <li>
-                                        <img src="../images/CedarBroad1.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-
-
-                                        </div>
+                                        <img src="/assets/images/1820BufordRd1.jpg">
                                     </li>
                                     <li>
-                                        <img src="../images/CedarBroad10.jpg">
-                                        <!-- random image -->
-                                        <div class="caption left-align">
-
-                                        </div>
+                                        <img src="/assets/images/1820BufordRd2.jpg">
                                     </li>
                                     <li>
-                                        <img src="../images/CedarBroad2.jpg">
-                                        <!-- random image -->
-                                        <div class="caption right-align">
-
-                                        </div>
+                                        <img src="/assets/images/1820BufordRd3.jpg">
                                     </li>
                                     <li>
-                                        <img src="../images/CedarBroad4.jpg">
-                                        <!-- random image -->
-                                        <div class="caption center-align">
-
-                                        </div>
+                                        <img src="/assets/images/1820BufordRd4.jpg">
                                     </li>
                                 </ul>
                             </div>
-
-
-                            </a>
                         </div>
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                                little markup to use effectively.</p>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="slider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="/assets/images/2710EBroadSt1.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/2710EBroadSt2.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/2710EBroadSt3.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/2710EBroadSt4.jpg">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="slider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="/assets/images/411SHarrisonSt1.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/411SHarrisonSt2.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/411SHarrisonSt3.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/411SHarrisonSt4.jpg">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="slider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="/assets/images/5008Coachmans1.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/5008Coachmans10.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/5008Coachmans2.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/5008Coachmans4.jpg">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="slider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="/assets/images/525N32ndSt1.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/525N32ndSt2.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/525N32ndSt3.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/525N32ndSt4.jpg">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="slider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="/assets/images/CedarBroad1.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/CedarBroad10.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/CedarBroad2.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/CedarBroad4.jpg">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="slider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="/assets/images/JamesRiveratStonyPoint1.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/JamesRiveratStonyPoint2.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/JamesRiveratStonyPoint3.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/JamesRiveratStonyPoint4.jpg">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="slider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="/assets/images/Manchester2.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/Manchester10.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/Manchester1.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/Manchester3.jpg">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="slider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="/assets/images/MarshallSpringsatGaytonW10.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/MarshallSpringsatGaytonW2.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/MarshallSpringsatGaytonW1.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/MarshallSpringsatGaytonW3.jpg">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="slider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="/assets/images/the-james-richmond-va-building-photo (2).jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/the-james-richmond-va-bathroom.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/the-james-richmond-va-bedroom.jpg">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/the-james-richmond-va-building-photo (1).jpg">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
                         </div>
                     </div>
                 </div>
 
 
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-image">
-                                <div class="slider">
-                                    <ul class="slides">
-                                        <li>
-                                            <img src="../images/JamesRiveratStonyPoint1.jpg">
-                                            <!-- random image -->
-                                            <div class="caption center-align">
-
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="../images/JamesRiveratStonyPoint2.jpg">
-                                            <!-- random image -->
-                                            <div class="caption left-align">
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="../images/JamesRiveratStonyPoint3.jpg">
-                                            <!-- random image -->
-                                            <div class="caption right-align">
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="../images/JamesRiveratStonyPoint4.jpg">
-                                            <!-- random image -->
-                                            <div class="caption center-align">
-
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-
-
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                                    little markup to use effectively.</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-image">
-                                <div class="slider">
-                                    <ul class="slides">
-                                        <li>
-                                            <img src="../images/Manchester2.jpg">
-                                            <!-- random image -->
-                                            <div class="caption center-align">
-
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="../images/Manchester10.jpg">
-                                            <!-- random image -->
-                                            <div class="caption left-align">
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="../images/Manchester1.jpg">
-                                            <!-- random image -->
-                                            <div class="caption right-align">
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="../images/Manchester3.jpg">
-                                            <!-- random image -->
-                                            <div class="caption center-align">
-
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-
-
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                                    little markup to use effectively.</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                        <div class="col s12 m4">
-                            <div class="card">
-                                <div class="card-image">
-                                    <div class="slider">
-                                        <ul class="slides">
-                                            <li>
-                                                <img src="../images/MarshallSpringsatGaytonW10.jpg">
-                                                <!-- random image -->
-                                                <div class="caption center-align">
-
-
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="../images/MarshallSpringsatGaytonW2.jpg">
-                                                <!-- random image -->
-                                                <div class="caption left-align">
-
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="../images/MarshallSpringsatGaytonW1.jpg">
-                                                <!-- random image -->
-                                                <div class="caption right-align">
-
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <img src="../images/MarshallSpringsatGaytonW3.jpg">
-                                                <!-- random image -->
-                                                <div class="caption center-align">
-
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-
-                                    </a>
-                                </div>
-                                <div class="card-content">
-                                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                                        little markup to use effectively.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                                <div class="col s12 m4">
-                                    <div class="card">
-                                        <div class="card-image">
-                                            <div class="slider">
-                                                <ul class="slides">
-                                                    <li>
-                                                        <img src="../images/the-james-richmond-va-building-photo (2).jpg">
-                                                        <!-- random image -->
-                                                        <div class="caption center-align">
-
-
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <img src="../images/the-james-richmond-va-bathroom.jpg">
-                                                        <!-- random image -->
-                                                        <div class="caption left-align">
-
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <img src="../images/the-james-richmond-va-bedroom.jpg">
-                                                        <!-- random image -->
-                                                        <div class="caption right-align">
-
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <img src="../images/the-james-richmond-va-building-photo (1).jpg">
-                                                        <!-- random image -->
-                                                        <div class="caption center-align">
-
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-
-                                            </a>
-                                        </div>
-                                        <div class="card-content">
-                                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                                                little markup to use effectively.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-            </div>
-
-
-
+            </div> -->
 
         </div>
 
-    </div>
     </div>
 
 
@@ -673,10 +443,6 @@
         </div>
     </div>
 
-
-
-
-
     <footer class="page-footer blue darken-3">
         <div class="container">
             <div class="row">
@@ -684,8 +450,6 @@
                     <h5 class="white-text">Company Bio</h5>
                     <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would
                         help support and continue development on this project and is greatly appreciated.</p>
-
-
                 </div>
                 <div class="col l3 s12">
                     <h5 class="white-text">Settings</h5>
@@ -736,10 +500,83 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="../js/home.js"></script>
-    <script type="text/javascript" src="../js/rental.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
-
-
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".slider").slider();
+            $("#submit-btn").on("click", function(event) {
+                event.preventDefault();
+    
+                var cityName = $("#cityName").val().trim();
+                var stateName = $("#stateName").val().trim();
+                var price = $("#price").val().trim();
+    
+                var newQuery = {};
+    
+                if (cityName !== "")
+                    newQuery.cityName = cityName;
+                if (stateName !== "")
+                    newQuery.stateName = stateName;
+                if (price !== "")
+                    newQuery.price = price;
+    
+                console.log("client", newQuery);
+    
+                $.get("/api/rentals", newQuery, function (data) {
+                    if (data) {
+                        console.log("response", data);
+    
+                        $.map(data, function(item) {
+                            $("#searchResults).append(`
+                                <div class="card">
+                                    <div class="card-image">
+                                        <div class="slider">
+                                            <ul class="slides">
+                                                <li><img src="${item.imageOne}"></li>
+                                                <li><img src="${item.imageTwo}"></li>
+                                                <li><img src="${item.imageThree}"></li>
+                                                <li><img src="${item.imageFour}"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+    
+                                    <div class="card-content">
+                                        <p>
+                                            <strong>Address:</strong> ${item.streetAddress1} ${item.streetAddress2} ${item.cityName}, ${item.stateName} ${item.zipCode}
+                                            <br>
+                                            <strong>Rent:</strong> ${item.price}
+                                            <br>
+                                            <strong>Beds:</strong> ${item.beds}
+                                            <br>
+                                            <strong>Baths:</strong> ${item.baths}
+                                            <br>
+                                            <strong>Square Feet:</strong> ${item.sqFeet}
+                                            <br>
+                                            <strong>Pets Allowed:</strong> ${item.pets}
+                                            <br>
+                                            <strong>Managed by:</strong> ${item.landlord}
+                                            <br>
+                                            <strong>Contact Info:</strong> ${data.managementContactInfo}
+                                        </p>
+                                    </div>
+                                </div>
+                            `)
+    
+                            $("#cityName).val("");
+                            $("#stateName).val("");
+                            $("#price").val("");
+                        });
+                    } else {
+                        $.map(data, function(item) {
+                            $("#searchResults).append(`
+                                <p>Please try again or click Submit to see all available listings.</p>
+                            `)
+                        });
+                    }
+                }
+            });
+        });
+    </script>
 
 </body>
 

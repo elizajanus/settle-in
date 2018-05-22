@@ -16,7 +16,6 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/assets/index.html"));
   });
 
-
   app.get("/apartments", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/assets/html/apartment.html"));
   });
@@ -27,20 +26,6 @@ module.exports = function (app) {
 
   app.get("/sublets", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/assets/html/sublets.html"));
-  });
-
-  app.get("/reviews", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/assets/html/reviews.html"));
-  });
-
-  // cms route loads cms.html
-  app.get("/cms", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/assets/html/cms.html"));
-  });
-
-  // landlords route loads landlord-manager.html
-  app.get("/landlords", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/assets/html/landlord-manager.html"));
   });
 
   app.get("/roommatessurvey", function (req, res) {

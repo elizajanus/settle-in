@@ -1,0 +1,27 @@
+{
+  "name": "settle-in",
+  "version": "1.0.0",
+  "description": "MOTIVATION Our team of five was inspired to create settle-in after seeing the flux of housing and the ranging qualities of rentals and landlords/management companies in our city. Settle_in is an app that helps users find roommates based on preferences, entire apartments/houses to rent, sublets, and reviews on landlord/management companies.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elizajanus/settle-in.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elizajanus/settle-in/issues"
+  },
+  "homepage": "https://github.com/elizajanus/settle-in#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.37.8"
+  }
+}
