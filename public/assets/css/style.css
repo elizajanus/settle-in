@@ -80,3 +80,11 @@ footer.page-footer {
     width: 100%;
   
 }
+
+
+.team {
+
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
