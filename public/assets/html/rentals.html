@@ -1,85 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Rentals</title>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rentals</title>
 
-        <!-- CSS  -->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
-        <!--Import Google Icon Font-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Exo:700" rel="stylesheet">
+    <!-- CSS  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo:700" rel="stylesheet">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
-        <link rel="stylesheet" href="../css/apartment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
+    <link rel="stylesheet" href="../css/apartment.css">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
-        <link rel="manifest" href="../favicon/site.webmanifest">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
-    </head>
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
 
-    <body>
-        <nav class="grey lighten-5" role="navigation">
-            <div class="nav-wrapper container grey lighten-5">
-                <a id="logo-container" href="#" class="brand-logo">
-                    <img class="settlein" src="../images/logo1.png" alt="">
-                </a>
-                <ul class="right hide-on-med-and-down">
+<body>
+    <nav class="grey lighten-5" role="navigation">
+        <div class="nav-wrapper container grey lighten-5">
+            <a id="logo-container" href="#" class="brand-logo">
+                <img class="settlein" src="../images/logo1.png" alt="">
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li>
+                    <a href="sublets.html">Find a Sublet</a>
+                </li>
+            </ul>
+            <ul id="nav-mobile" class="sidenav">
                     <li>
-                        <a href="#">Navbar Link</a>
+                        <a href="roommate-home.html">Find a Roommate</a>
                     </li>
                 </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+    </nav>
 
-                <ul id="nav-mobile" class="sidenav">
-                    <li>
-                        <a href="#">Navbar Link</a>
-                    </li>
-                </ul>
-                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-                    <i class="material-icons">menu</i>
-                </a>
-            </div>
-        </nav>
-
-        <div id="index-banner" class="parallax-container">
-            <div class="section no-pad-bot">
-                <div class="container">
-                    <br>
-                    <br>
+    <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <br>
+                <br>
 
 
-                    <div class="row center">
+                <div class="row center">
 
-                        <h3 class="header col s12 light white-text headerfont">Are You Looking For A Place to Settle In?</h3>
-                        <h3 class="header col s12 light white-text headerfont">Search below to find your perfect apartment or house.</h3>
-
-                    </div>
-
-                    <br>
-                    <br>
+                    <h3 class="header col s12 light white-text headerfont">Are You Looking For A Place to Settle In?</h3>
+                    <h3 class="header col s12 light white-text headerfont">Search below to find your perfect apartment or house.</h3>
 
                 </div>
+
+                <br>
+                <br>
+
             </div>
-            <div class="parallax">
-                <img class="back" src="../images/richmond.jpg" alt="Unsplashed background img 1">
-            </div>
         </div>
-
-
-        <div class="container ">
-            <div class="section grey lighten-3 z-depth-5" id="searchResults">
-
-                <!--   Icon Section   -->
-                
-
+        <div class="parallax">
+            <img class="back" src="../images/richmond.jpg" alt="Unsplashed background img 1">
         </div>
-        </div>
+    </div>
+
+
+    <div class="container ">
+        <div class="section grey lighten-3 z-depth-5 " id="searchResults">
+
+            <!--   Icon Section   -->
+            <div class="container">
+                    <div class="row">
+                        <h3><strong>Search for rentals:</strong></h3>
+                    </div>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s3">
+                                    <input id="cityName" type="text" class="validate">
+                                    <label for="city">City</label>
+                                </div>
+                                <div class="input-field col s3">
+                                    <input id="stateName" type="text" class="validate">
+                                    <label for="state">State</label>
+                                </div>
+                                <div class="input-field col s3">
+                                    <input id="price" type="text" class="validate">
+                                    <label for="price">Price</label>
+                                </div>
+                                <div class="input-field col3">
+                                    <a class="waves-effect waves-light btn-large" id="submit-btn">Submit</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+    </div>
+    </div>
 
 
         <div class="parallax-container valign-wrapper">
