@@ -37,4 +37,16 @@ module.exports = function(app) {
     });
   });
 
+  app.put("/api/roommates/:id", function(req, res) {
+    db.Roommate.update(
+      req.image,
+      {
+        where: {
+          id: req.body.id
+        }
+      }).then(function(dbImage) {
+      res.json(dbImage);
+    });
+  });
+
 };
