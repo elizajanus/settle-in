@@ -4,6 +4,7 @@
 // Dependencies
 // =============================================================
 var path = require("path");
+var db = require("../models");
 
 // Routes
 // =============================================================
@@ -47,9 +48,13 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/assets/html/roommate.html"));
   });
 
-  app.get("/roommateslisting", function (req, res) {
+  /*app.get("/roommateslisting", function (req, res) {
     res.render(path.join(__dirname, "../views/index.handlebars"));
+  });*/
+  app.get("/roommateslisting", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/assets/html/roommate-listing.html"));
   });
+
 
   app.get("/roommates", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/assets/html/roommate-home.html"));
