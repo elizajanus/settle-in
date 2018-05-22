@@ -4,10 +4,6 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        description: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
         rent: {
             type: DataTypes.INTEGER,
             allowNull: false
@@ -33,10 +29,10 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         },
         city: {
-            type: DataTypes.BOOLEAN,
+            type: DataTypes.STRING,
             allowNull: false
         },
-        location: {
+        address: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -47,7 +43,12 @@ module.exports = function (sequelize, DataTypes) {
         managementContactInfo: {
             type: DataTypes.STRING,
             allowNull: false
-        }
+        },
+        imageOne: DataTypes.STRING,
+        imageTwo: DataTypes.STRING,
+        imageThree: DataTypes.STRING,
+        createdAt: DataTypes.DATE,
+        updatedAt: DataTypes.DATE
     });
 
     return sublet;
