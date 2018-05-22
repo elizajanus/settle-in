@@ -1,19 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
   var Rental = sequelize.define("Rental", {
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1] //has to be at least one character
-      }
-    },
-    body: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      validate: {
-        len: [1] //has to be at least one character
-      }
-    },
     streetAddress1: {
       type: DataTypes.STRING,
       allowNull: false
@@ -28,7 +14,7 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false
     },
     zipCode: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     price: {
@@ -41,6 +27,12 @@ module.exports = function (sequelize, DataTypes) {
     pets: DataTypes.BOOLEAN,
     landlord: DataTypes.STRING,
     managementContactInfo: DataTypes.STRING,
+    imageOne: DataTypes.STRING,
+    imageTwo: DataTypes.STRING,
+    imageThree: DataTypes.STRING,
+    imageFour: DataTypes.STRING,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   });
 
   return Rental;
