@@ -63,6 +63,10 @@ footer.page-footer {
 
     width: 87.948px;
     height: 50.328px;
+    position:absolute;
+    left:10px;
+    top:10px;
+    margin: 0px 15px 15px 0px;
 }
 
 .headerfont{
